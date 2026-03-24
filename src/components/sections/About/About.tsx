@@ -35,6 +35,9 @@ export default function About() {
         <div className="flex flex-col gap-4">
           <FadeUp delay={100}>
             <p className="text-2xl font-bold text-white">
+              Paulo Guilherme Alves
+            </p>
+            <p className="text-sm text-ios-text-secondary mt-1">
               Passionate Developer
             </p>
           </FadeUp>
