@@ -4,4 +4,4 @@ export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/pg_alvesx/",
 } as const;
 
-export const CONTACT_EMAIL = "seuemail@exemplo.com"; // TODO: replace with real email
+export const CONTACT_EMAIL = "paulogui5433@outlook.com";

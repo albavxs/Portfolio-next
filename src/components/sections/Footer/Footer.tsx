@@ -1,6 +1,6 @@
 "use client";
 
-import { SOCIAL_LINKS } from "@/lib/constants";
+import { SOCIAL_LINKS, CONTACT_EMAIL } from "@/lib/constants";
 import { BsGithub, BsLinkedin, BsInstagram, BsEnvelope } from "react-icons/bs";
 import FadeUp from "@/components/motion/FadeUp";
 
@@ -8,12 +8,12 @@ const socials = [
   { href: SOCIAL_LINKS.github, icon: BsGithub, label: "GitHub" },
   { href: SOCIAL_LINKS.linkedin, icon: BsLinkedin, label: "LinkedIn" },
   { href: SOCIAL_LINKS.instagram, icon: BsInstagram, label: "Instagram" },
-  { href: "mailto:seuemail@exemplo.com", icon: BsEnvelope, label: "Email" },
+  { href: `mailto:${CONTACT_EMAIL}`, icon: BsEnvelope, label: "Email" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="w-full flex flex-col items-center pb-[120px] pt-16">
+    <footer className="w-full flex flex-col items-center pb-16 pt-16">
       <FadeUp>
         <div className="w-[90%] max-w-[600px] mx-auto flex flex-col items-center gap-8">
           {/* Divider */}

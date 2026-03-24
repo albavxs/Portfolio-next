@@ -66,6 +66,18 @@ export default function ProjectModal({ project, onClose }: Props) {
               {project.details}
             </p>
 
+            {/* Tech tags */}
+            <div className="flex flex-wrap gap-2">
+              {project.tech.map((t) => (
+                <span
+                  key={t}
+                  className="text-xs text-ios-text-secondary border border-ios-border rounded-full px-3 py-1"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+
             <div className="flex gap-3 mt-2">
               <a
                 href={project.githubUrl}

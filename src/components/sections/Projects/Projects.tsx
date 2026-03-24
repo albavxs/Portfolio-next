@@ -10,7 +10,7 @@ export default function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
 
   return (
-    <section className="w-full flex flex-col items-center">
+    <section id="projects-section" className="w-full flex flex-col items-center">
       <FadeUp>
         <h2 className="text-[32px] font-bold text-white text-center mt-[60px] mb-[30px] md:text-2xl md:mt-10 md:mb-5">
           Projects

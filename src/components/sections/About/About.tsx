@@ -8,7 +8,7 @@ const badges = ["Computer Science at IBMR", "Rio de Janeiro, RJ", "Full Stack De
 
 export default function About() {
   return (
-    <section className="w-full flex flex-col items-center">
+    <section id="about-section" className="w-full flex flex-col items-center">
       <FadeUp>
         <h2 className="text-[32px] font-bold text-white text-center mt-[60px] mb-[30px] md:text-2xl md:mt-10 md:mb-5">
           About Me
@@ -21,7 +21,7 @@ export default function About() {
           <div className="[perspective:800px] shrink-0">
             <div className="transition-transform duration-500 hover:[transform:rotateY(5deg)_rotateX(2deg)]">
               <Image
-                src="/images/profile/thumbnail_Image.png"
+                src="/images/profile/thumbnail_Image.jpeg"
                 alt="Paulo Guilherme"
                 width={220}
                 height={220}
@@ -66,7 +66,7 @@ export default function About() {
                 <p className="text-xs text-ios-text-secondary">Projects</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-bold text-white">1+</p>
+                <p className="text-2xl font-bold text-white">2+</p>
                 <p className="text-xs text-ios-text-secondary">Year Experience</p>
               </div>
             </div>
