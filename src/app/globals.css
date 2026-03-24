@@ -1,49 +1,103 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tailwindcss";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  --color-ios-bg: #05050a;
+  --color-ios-glass: rgba(255, 255, 255, 0.05);
+  --color-ios-border: rgba(255, 255, 255, 0.1);
+  --color-ios-text: #ffffff;
+  --color-ios-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-ios-accent: #007AFF;
+  --color-ios-glass-hover: rgba(255, 255, 255, 0.08);
+  --color-ios-glass-solid: rgba(20, 20, 30, 0.8);
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: var(--color-ios-bg);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  color: var(--color-ios-text);
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% { width: 0; }
+  40% { width: 9ch; }
+  60% { width: 9ch; }
+  80% { width: 9ch; }
+  100% { width: 9ch; }
+}
+
+@keyframes blinkMarker {
+  0%, 50% { border-color: var(--color-ios-text-secondary); }
+  51%, 100% { border-color: transparent; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes inputShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.typing-text {
+  border-right: 2px solid var(--color-ios-text-secondary);
+  width: 9ch;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: blinkMarker 0.5s infinite, typing 5s infinite steps(9) forwards;
+}
+
+.bounce-arrow {
+  animation: bounce 2s infinite;
+}
+
+.input-error {
+  border-color: #ff3b30 !important;
+  animation: inputShake 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .typing-text {
+    animation: blinkMarker 0.5s infinite, typing-mobile 5s infinite steps(9) forwards;
   }
 }
+
+@keyframes typing-mobile {
+  0% { width: 0; }
+  40% { width: 8ch; }
+  60% { width: 8ch; }
+  80% { width: 8ch; }
+  100% { width: 8ch; }
+}
+
+/* Marquee animations */
+@keyframes marquee-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
