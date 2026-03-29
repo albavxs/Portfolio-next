@@ -27,6 +27,7 @@ export default function Nav() {
   const activeLink = linkKeys.find(({ id }) => id === active) ?? linkKeys[0];
   const ActiveIcon = activeLink.icon;
   const isPtBr = lang === "pt-br";
+  const currentLanguageLabel = isPtBr ? "PT" : "EN";
 
   useEffect(() => {
     const onScroll = () => {
@@ -88,7 +89,7 @@ export default function Nav() {
           onClick={toggleLang}
           className="px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 cursor-pointer border-none text-ios-accent hover:bg-white/5"
         >
-          {lang === "pt-br" ? "PT" : "EN"}
+          {currentLanguageLabel}
         </button>
       </nav>
 
@@ -116,7 +117,7 @@ export default function Nav() {
               aria-label={isPtBr ? "Switch to English" : "Mudar para português"}
               className="flex h-11 min-w-11 items-center justify-center rounded-[18px] border border-white/10 bg-white/[0.05] px-3 text-xs font-semibold text-ios-accent transition-all duration-300 active:scale-95"
             >
-              {isPtBr ? "EN" : "PT"}
+              {currentLanguageLabel}
             </button>
 
             <button
