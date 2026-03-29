@@ -49,7 +49,7 @@ export default function ProjectModal({ project, onClose }: Props) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           onClick={onClose}
-          className="fixed inset-0 z-[1001] flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-0 sm:p-5"
+          className="fixed inset-0 z-[1001] flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-2 sm:p-5"
         >
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -70,7 +70,7 @@ export default function ProjectModal({ project, onClose }: Props) {
               />
             </div>
 
-            <div className="px-8 pb-8 flex flex-col gap-5">
+            <div className="px-5 pb-5 sm:px-8 sm:pb-8 flex flex-col gap-4 sm:gap-5">
               {/* Handle bar (mobile) */}
               <div className="w-10 h-1 bg-white/20 rounded-full mx-auto sm:hidden" />
 

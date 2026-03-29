@@ -33,25 +33,102 @@ body {
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
 
-@keyframes inputShake {
-  0%, 100% { transform: translateX(0); }
-  20% { transform: translateX(-6px); }
-  40% { transform: translateX(6px); }
-  60% { transform: translateX(-4px); }
-  80% { transform: translateX(4px); }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .bounce-arrow {
   animation: bounce 2s infinite;
 }
 
-.input-error {
-  border-color: #ff3b30 !important;
-  animation: inputShake 0.5s ease;
+/* Hero gradient mesh — mobile replacement for Three.js */
+@keyframes mesh-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hero-gradient-mesh {
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(0, 122, 255, 0.08) 0, transparent 26%),
+    radial-gradient(circle at 82% 78%, rgba(109, 40, 217, 0.05) 0, transparent 24%),
+    var(--color-ios-bg);
+}
+
+.hero-gradient-mesh::before,
+.hero-gradient-mesh::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(64px);
+  animation: mesh-rotate 26s linear infinite;
+  opacity: 0.75;
+}
+
+.hero-gradient-mesh::before {
+  width: 220px;
+  height: 220px;
+  top: 18%;
+  left: -8%;
+  background: radial-gradient(circle, rgba(0, 122, 255, 0.13) 0%, transparent 68%);
+}
+
+.hero-gradient-mesh::after {
+  width: 180px;
+  height: 180px;
+  bottom: 16%;
+  right: -3%;
+  background: radial-gradient(circle, rgba(100, 40, 180, 0.09) 0%, transparent 68%);
+  animation-direction: reverse;
+  animation-duration: 30s;
+}
+
+.mobile-gradient-surface {
+  background: linear-gradient(180deg, #05050a 0%, #070712 55%, #05050a 100%);
+  overflow: hidden;
+}
+
+.mobile-gradient-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(0, 122, 255, 0.08) 0, transparent 24%),
+    radial-gradient(circle at 82% 72%, rgba(100, 40, 180, 0.06) 0, transparent 22%);
+  opacity: 0.9;
+}
+
+/* Section dividers */
+.section-divider {
+  width: 60px;
+  height: 2px;
+  margin: 0 auto;
+  border-radius: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-ios-accent), transparent);
+  opacity: 0.4;
+  animation: divider-pulse 3s ease-in-out infinite;
+}
+
+@keyframes divider-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Map clip reveal */
+@keyframes clip-reveal {
+  from { clip-path: inset(100% 0 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+.map-reveal {
+  animation: clip-reveal 0.8s ease-out forwards;
 }
 
 /* Marquee animations */
@@ -89,3 +166,31 @@ body {
   scrollbar-color: var(--color-ios-accent) rgba(255, 255, 255, 0.05);
 }
 
+/* Snap carousel for mobile certificates */
+.snap-carousel {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-inline: 1rem;
+}
+
+.snap-card {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+/* Skill tap glow on mobile */
+@media (hover: none) {
+  .skill-pill-tap:active {
+    border-color: var(--brand) !important;
+    box-shadow: 0 0 20px color-mix(in srgb, var(--brand) 25%, transparent) !important;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 767px) {
+  .section-divider {
+    width: 48px;
+    animation: none;
+    opacity: 0.45;
+  }
+}

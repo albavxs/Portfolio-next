@@ -48,14 +48,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const saved = localStorage.getItem("lang") as Lang | null;
     if (saved === "pt-br" || saved === "en") {
-      setLangState(saved);
+      queueMicrotask(() => {
+        setLangState(saved);
+      });
     }
   }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = lang === "pt-br" ? "pt-BR" : "en";
+  }, [lang]);
 
   const setLang = (newLang: Lang) => {
     setLangState(newLang);
     localStorage.setItem("lang", newLang);
-    document.documentElement.lang = newLang === "pt-br" ? "pt-BR" : "en";
   };
 
   const t = (key: string): string => {

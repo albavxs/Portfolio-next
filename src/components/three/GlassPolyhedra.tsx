@@ -4,6 +4,15 @@ import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
+function seededRandom(seed: number) {
+  const value = Math.sin(seed * 12.9898) * 43758.5453;
+  return value - Math.floor(value);
+}
+
+function seededRange(seed: number, min: number, max: number) {
+  return min + seededRandom(seed) * (max - min);
+}
+
 function FloatingShape({
   position,
   scale,
@@ -49,18 +58,19 @@ function FloatingShape({
 export default function GlassPolyhedra() {
   const shapes = useMemo(() => {
     const items = [];
-    const count = typeof window !== "undefined" && window.innerWidth < 768 ? 8 : 18;
+    const count = 18;
+
     for (let i = 0; i < count; i++) {
       items.push({
         position: [
-          (Math.random() - 0.5) * 12,
-          (Math.random() - 0.5) * 8,
-          (Math.random() - 0.5) * 4 - 1,
+          seededRange(i * 7 + 1, -6, 6),
+          seededRange(i * 7 + 2, -4, 4),
+          seededRange(i * 7 + 3, -3, 1),
         ] as [number, number, number],
-        scale: 0.3 + Math.random() * 0.9,
-        speed: 0.3 + Math.random() * 0.7,
-        offset: Math.random() * Math.PI * 2,
-        geometry: (Math.random() > 0.5 ? "icosahedron" : "octahedron") as
+        scale: seededRange(i * 7 + 4, 0.3, 1.2),
+        speed: seededRange(i * 7 + 5, 0.3, 1.0),
+        offset: seededRange(i * 7 + 6, 0, Math.PI * 2),
+        geometry: (seededRandom(i * 7 + 7) > 0.5 ? "icosahedron" : "octahedron") as
           | "icosahedron"
           | "octahedron",
       });

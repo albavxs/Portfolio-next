@@ -4,17 +4,25 @@ import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
+function seededRandom(seed: number) {
+  const value = Math.sin(seed * 12.9898) * 43758.5453;
+  return value - Math.floor(value);
+}
+
+function seededRange(seed: number, min: number, max: number) {
+  return min + seededRandom(seed) * (max - min);
+}
+
 export default function ParticleDust() {
   const pointsRef = useRef<THREE.Points>(null!);
-
-  const count = typeof window !== "undefined" && window.innerWidth < 768 ? 80 : 300;
+  const count = 300;
 
   const positions = useMemo(() => {
     const pos = new Float32Array(count * 3);
     for (let i = 0; i < count * 3; i += 3) {
-      pos[i] = (Math.random() - 0.5) * 20;
-      pos[i + 1] = (Math.random() - 0.5) * 15;
-      pos[i + 2] = (Math.random() - 0.5) * 8;
+      pos[i] = seededRange(i + 1, -10, 10);
+      pos[i + 1] = seededRange(i + 2, -7.5, 7.5);
+      pos[i + 2] = seededRange(i + 3, -4, 4);
     }
     return pos;
   }, [count]);
@@ -22,7 +30,7 @@ export default function ParticleDust() {
   const velocities = useMemo(() => {
     const vel = new Float32Array(count * 3);
     for (let i = 0; i < count * 3; i++) {
-      vel[i] = (Math.random() - 0.5) * 0.002;
+      vel[i] = seededRange(i + 101, -0.001, 0.001);
     }
     return vel;
   }, [count]);

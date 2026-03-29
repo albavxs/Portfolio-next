@@ -1,12 +1,11 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 export default function MouseParallax() {
   const mouse = useRef({ x: 0, y: 0 });
-  const { camera } = useThree();
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -18,7 +17,7 @@ export default function MouseParallax() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  useFrame(() => {
+  useFrame(({ camera }) => {
     const targetX = mouse.current.x * 0.3;
     const targetY = mouse.current.y * 0.3;
 

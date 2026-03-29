@@ -6,17 +6,35 @@ import { useEffect, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SOCIAL_LINKS } from "@/lib/constants";
 import { BsGithub, BsLinkedin, BsDownload } from "react-icons/bs";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiNodedotjs,
+  SiPython,
+  SiDocker,
+  SiTailwindcss,
+} from "react-icons/si";
 
 const SceneCanvas = dynamic(() => import("@/components/three/SceneCanvas"), {
   ssr: false,
 });
+
+const heroTechPills = [
+  { Icon: SiReact, color: "#61DAFB", label: "React" },
+  { Icon: SiNextdotjs, color: "#FFFFFF", label: "Next.js" },
+  { Icon: SiTypescript, color: "#3178C6", label: "TypeScript" },
+  { Icon: SiNodedotjs, color: "#339933", label: "Node.js" },
+  { Icon: SiPython, color: "#3776AB", label: "Python" },
+  { Icon: SiDocker, color: "#2496ED", label: "Docker" },
+  { Icon: SiTailwindcss, color: "#06B6D4", label: "Tailwind" },
+];
 
 function CodeBlock() {
   const { t } = useLanguage();
 
   return (
     <div className="w-full max-w-[660px] rounded-2xl overflow-hidden border border-ios-border bg-[#0d1117] shadow-2xl">
-      {/* Title bar */}
       <div className="flex items-center gap-2 px-4 py-3 bg-[#161b22] border-b border-ios-border">
         <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
         <span className="w-3 h-3 rounded-full bg-[#febc2e]" />
@@ -29,7 +47,6 @@ function CodeBlock() {
         </span>
       </div>
 
-      {/* Code content */}
       <div className="p-6 font-mono text-[13px] leading-relaxed overflow-x-auto">
         <div className="text-ios-text-secondary">
           <span className="text-[#ff7b72]">const</span>{" "}
@@ -49,7 +66,6 @@ function CodeBlock() {
         </div>
         <div className="text-ios-text-secondary">{"}"}</div>
 
-        {/* TechStack object */}
         <div className="mt-4 text-ios-text-secondary">
           <span className="text-[#ff7b72]">const</span>{" "}
           <span className="text-[#d2a8ff]">TechStack</span>{" "}
@@ -106,13 +122,11 @@ export default function Hero() {
       const scrollY = window.scrollY;
       const vh = window.innerHeight;
 
-      // Parallax on hero content — moves up slower
       if (contentRef.current) {
         contentRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
         contentRef.current.style.opacity = `${Math.max(0, 1 - scrollY / (vh * 0.7))}`;
       }
 
-      // Fade out and hide SVG + Three.js after hero
       const opacity = Math.max(0, 1 - scrollY / (vh * 0.6));
       if (bgRef.current) {
         bgRef.current.style.opacity = `${opacity}`;
@@ -139,31 +153,33 @@ export default function Hero() {
     <section
       id="hero-section"
       ref={sectionRef}
-      className="relative h-dvh w-full flex flex-col justify-center items-center px-5 overflow-hidden"
+      className="relative h-dvh w-full flex flex-col justify-center items-center px-4 sm:px-5 overflow-hidden"
     >
-      {/* SVG Background */}
+      {/* SVG Background — hidden on mobile */}
       <object
         ref={bgRef}
         data="/background.svg"
         type="image/svg+xml"
         aria-hidden="true"
-        className="absolute inset-0 z-0 w-full h-full pointer-events-none object-cover transition-opacity duration-100"
+        className="absolute inset-0 z-0 w-full h-full pointer-events-none object-cover transition-opacity duration-100 hidden md:block"
       />
 
-      {/* Three.js Layer */}
-      <div ref={threeRef} className="absolute inset-0 z-[1] pointer-events-none transition-opacity duration-100">
+      {/* Animated gradient mesh — mobile only */}
+      <div className="absolute inset-0 z-0 md:hidden hero-gradient-mesh" aria-hidden="true" />
+
+      {/* Three.js Layer — hidden on mobile */}
+      <div ref={threeRef} className="absolute inset-0 z-[1] pointer-events-none transition-opacity duration-100 hidden md:block">
         <SceneCanvas />
       </div>
 
-      {/* Content — two columns */}
+      {/* Content */}
       <div
         ref={contentRef}
-        className="relative z-[2] w-full max-w-[1100px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 will-change-transform"
+        className="relative z-[2] w-full max-w-[1100px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-9 lg:gap-16 will-change-transform"
       >
-        {/* Left column — avatar + name + subtitle + buttons */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-[520px]">
-          {/* Avatar */}
-          <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-ios-border shadow-lg mb-5">
+        {/* Left column */}
+        <div className="flex w-full max-w-[520px] flex-col items-center lg:items-start text-center lg:text-left">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-ios-border shadow-lg mb-4 sm:mb-5">
             <Image
               src="/images/profile/thumbnail_Image.jpeg"
               alt="Paulo Guilherme"
@@ -173,13 +189,11 @@ export default function Hero() {
             />
           </div>
 
-          {/* Name */}
-          <h1 className="text-[clamp(40px,7vw,72px)] font-bold text-white leading-none [text-shadow:_0_2px_8px_rgba(0,0,0,0.4)]">
+          <h1 className="text-[clamp(32px,7vw,72px)] font-bold text-white leading-none [text-shadow:_0_2px_8px_rgba(0,0,0,0.4)]">
             {t("hero.name")}
           </h1>
 
-          {/* Subtitle with bold highlights */}
-          <p className="text-ios-text-secondary text-base md:text-lg mt-4 leading-relaxed">
+          <p className="mt-3 max-w-[34ch] text-ios-text-secondary text-sm leading-relaxed sm:mt-4 sm:text-base md:text-lg">
             {t("hero.subtitlePre")}{t("hero.subtitlePre") ? " " : ""}
             <span className="font-semibold text-white">{t("hero.subtitleBold1")}</span>
             {" "}{t("hero.subtitleMid")}{" "}
@@ -188,11 +202,11 @@ export default function Hero() {
           </p>
 
           {/* Buttons */}
-          <div className="flex items-center gap-4 mt-7">
+          <div className="mt-5 flex w-full flex-wrap items-center justify-center gap-3 sm:mt-7 sm:gap-4 lg:justify-start">
             <a
               href={resumeUrl}
               download
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-ios-glass border border-ios-border text-white text-sm font-medium transition-all duration-300 hover:bg-ios-glass-hover hover:scale-105"
+              className="flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-ios-glass border border-ios-border text-white text-xs sm:text-sm font-medium transition-all duration-300 hover:bg-ios-glass-hover hover:scale-105"
             >
               <BsDownload size={14} />
               {t("hero.downloadCv")}
@@ -201,24 +215,38 @@ export default function Hero() {
               href={SOCIAL_LINKS.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-ios-text-secondary text-sm font-medium transition-all duration-300 hover:text-white"
+              className="flex items-center gap-2 text-ios-text-secondary text-xs sm:text-sm font-medium transition-all duration-300 hover:text-white"
             >
               <BsGithub size={18} />
-              Github
+              <span className="hidden sm:inline">Github</span>
             </a>
             <a
               href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-ios-text-secondary text-sm font-medium transition-all duration-300 hover:text-white"
+              className="flex items-center gap-2 text-ios-text-secondary text-xs sm:text-sm font-medium transition-all duration-300 hover:text-white"
             >
               <BsLinkedin size={18} />
-              LinkedIn
+              <span className="hidden sm:inline">LinkedIn</span>
             </a>
+          </div>
+
+          {/* Tech pills — mobile only (replaces code block) */}
+          <div className="mt-7 flex max-w-[420px] flex-wrap justify-center gap-2 md:hidden lg:justify-start">
+            {heroTechPills.map(({ Icon, color, label }) => (
+              <span
+                key={label}
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.045] px-3 py-1.5 text-[11px] font-medium text-white/80 backdrop-blur-xl"
+                style={{ boxShadow: `0 10px 30px rgba(0, 0, 0, 0.18), inset 0 0 0 1px ${color}24` }}
+              >
+                <Icon className="h-3.5 w-3.5" style={{ color }} />
+                {label}
+              </span>
+            ))}
           </div>
         </div>
 
-        {/* Right column — code block */}
+        {/* Right column — code block (desktop only) */}
         <div className="hidden md:block">
           <CodeBlock />
         </div>
@@ -226,14 +254,14 @@ export default function Hero() {
 
       {/* Scroll Arrow */}
       <div
-        className="bounce-arrow mt-8 cursor-pointer transition-transform duration-300 relative z-[2]"
+        className="bounce-arrow mt-6 sm:mt-8 cursor-pointer transition-transform duration-300 relative z-[2]"
         onClick={scrollToAbout}
       >
         <Image
           src="/images/misc/icons8-down-64.png"
           alt="Scroll down"
-          width={40}
-          height={40}
+          width={36}
+          height={36}
         />
       </div>
     </section>

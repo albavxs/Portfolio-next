@@ -10,11 +10,11 @@ export default function Organization() {
   const { t } = useLanguage();
 
   return (
-    <section className="w-full max-w-[1200px] mx-auto px-6 py-20">
+    <section className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 py-16 sm:py-20">
       <FadeUp>
         <div className="flex items-center justify-center gap-3 mb-3">
           <BsPeopleFill size={24} className="text-ios-accent" />
-          <h2 className="text-2xl md:text-3xl font-bold text-white">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
             {t("org.title")}
           </h2>
         </div>
