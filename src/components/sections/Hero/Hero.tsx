@@ -15,7 +15,7 @@ function CodeBlock() {
   const { t } = useLanguage();
 
   return (
-    <div className="w-full max-w-[580px] rounded-2xl overflow-hidden border border-ios-border bg-[#0d1117] shadow-2xl">
+    <div className="w-full max-w-[660px] rounded-2xl overflow-hidden border border-ios-border bg-[#0d1117] shadow-2xl">
       {/* Title bar */}
       <div className="flex items-center gap-2 px-4 py-3 bg-[#161b22] border-b border-ios-border">
         <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
@@ -30,7 +30,7 @@ function CodeBlock() {
       </div>
 
       {/* Code content */}
-      <div className="p-6 font-mono text-sm leading-loose overflow-x-auto">
+      <div className="p-6 font-mono text-[13px] leading-relaxed overflow-x-auto">
         <div className="text-ios-text-secondary">
           <span className="text-[#ff7b72]">const</span>{" "}
           <span className="text-[#d2a8ff]">FullStackDeveloper</span>{" "}
@@ -48,6 +48,19 @@ function CodeBlock() {
           <span className="text-ios-text-secondary">,</span>
         </div>
         <div className="text-ios-text-secondary">{"}"}</div>
+
+        {/* TechStack object */}
+        <div className="mt-4 text-ios-text-secondary">
+          <span className="text-[#ff7b72]">const</span>{" "}
+          <span className="text-[#d2a8ff]">TechStack</span>{" "}
+          <span className="text-[#ff7b72]">=</span>{" "}
+          <span className="text-ios-text-secondary">{"{"}</span>
+        </div>
+        <CodeArray label="frontend" values={["React", "Next.js", "TailwindCSS"]} />
+        <CodeArray label="backend" values={["Node.js", "Python", "Express"]} />
+        <CodeArray label="database" values={["PostgreSQL", "MongoDB", "Supabase"]} />
+        <CodeArray label="tools" values={["Git", "Docker", "Linux"]} />
+        <div className="text-ios-text-secondary">{"}"}</div>
       </div>
     </div>
   );
@@ -64,8 +77,25 @@ function CodeLine({ label, value }: { label: string; value: string }) {
   );
 }
 
+function CodeArray({ label, values }: { label: string; values: string[] }) {
+  return (
+    <div className="pl-6">
+      <span className="text-[#79c0ff]">{label}</span>
+      <span className="text-ios-text-secondary">: [</span>
+      {values.map((v, i) => (
+        <span key={v}>
+          <span className="text-[#a5d6ff]">&quot;{v}&quot;</span>
+          {i < values.length - 1 && <span className="text-ios-text-secondary">, </span>}
+        </span>
+      ))}
+      <span className="text-ios-text-secondary">],</span>
+    </div>
+  );
+}
+
 export default function Hero() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+  const resumeUrl = lang === "en" ? "/resume/PauloGuilherme_CV_EN-1.pdf" : "/resume/PauloGuilherme_CV_PTBR-1.pdf";
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLObjectElement>(null);
@@ -160,7 +190,7 @@ export default function Hero() {
           {/* Buttons */}
           <div className="flex items-center gap-4 mt-7">
             <a
-              href="/resume/PauloGuilherme.2.pdf"
+              href={resumeUrl}
               download
               className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-ios-glass border border-ios-border text-white text-sm font-medium transition-all duration-300 hover:bg-ios-glass-hover hover:scale-105"
             >

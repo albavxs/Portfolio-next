@@ -10,7 +10,7 @@ export interface ExperienceEntry {
 export const experience: ExperienceEntry[] = [
   {
     dateRange: "Nov 2025 - Present",
-    title: "Full Stack Developer (Full-time)",
+    title: "Full Stack Developer",
     company: "Few Company",
     description: "Promoted to full-time developer, responsible for end-to-end web solutions and system architecture.",
     bullets: [
@@ -19,11 +19,11 @@ export const experience: ExperienceEntry[] = [
       "REST API integration and database management",
       "Technical mentoring and team code reviews",
     ],
-    techBadges: ["React", "Next.js", "Node.js", "TypeScript", "Docker"],
+    techBadges: ["React", "Next.js", "Node.js", "TypeScript", "Docker", "Git", "Supabase", "Linux", "Bash", "Python"],
   },
   {
     dateRange: "Apr 2025 - Nov 2025",
-    title: "QA Engineer",
+    title: "Quality Analyst (QA)",
     company: "Lance",
     description: "Focused on quality assurance, automated testing, and ensuring software reliability.",
     bullets: [
@@ -32,7 +32,7 @@ export const experience: ExperienceEntry[] = [
       "Collaboration with development team for continuous improvement",
       "Quality assurance across multiple platforms",
     ],
-    techBadges: ["JavaScript", "Python", "Git", "Linux"],
+    techBadges: ["Postman", "Selenium", "Jira", "JavaScript", "Python"],
   },
   {
     dateRange: "Feb 2025 - Nov 2025",
@@ -46,5 +46,18 @@ export const experience: ExperienceEntry[] = [
       "Direct communication with stakeholders for requirements gathering",
     ],
     techBadges: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+  },
+  {
+    dateRange: "Mar 2024 - Feb 2025",
+    title: "Full Stack Developer (Freelancer)",
+    company: "Freelancer de Projetos",
+    description: "Freelance development of web projects for various clients.",
+    bullets: [
+      "Full stack development of web applications from scratch",
+      "Direct client communication and requirements gathering",
+      "Delivery of responsive and functional solutions",
+      "Technology stack selection based on project needs",
+    ],
+    techBadges: ["React", "Node.js", "JavaScript", "HTML", "CSS"],
   },
 ];

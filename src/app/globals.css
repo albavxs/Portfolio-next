@@ -65,3 +65,27 @@ body {
   100% { transform: translateX(0%); }
 }
 
+/* Certificates carousel scrollbar */
+.certificates-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.certificates-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.certificates-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-ios-accent);
+  border-radius: 3px;
+}
+
+.certificates-scroll::-webkit-scrollbar-thumb:hover {
+  background: #339af0;
+}
+
+.certificates-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ios-accent) rgba(255, 255, 255, 0.05);
+}
+

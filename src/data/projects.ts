@@ -15,7 +15,7 @@ export const projects: Project[] = [
       "Open-source platform for learning algorithms interactively and visually, inspired by the book Grokking Algorithms.",
     details:
       "An educational tool that brings algorithms and data structures to life through visual, step-by-step representations. Users can explore sorting algorithms, search trees, linked lists, and more — watching each operation unfold in real time. Built to make CS fundamentals accessible and engaging.",
-    tech: ["TypeScript", "React", "CSS Modules", "Storybook"],
+    tech: ["TypeScript", "React", "Next.js", "CSS Modules", "Storybook"],
     githubUrl: "https://github.com/albavxs/AlgoriUI",
     deployUrl: "https://algori-ui.vercel.app/",
     screenshot: "/images/screenshots/AlgoriUI.png",

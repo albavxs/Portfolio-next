@@ -72,14 +72,7 @@ export const skills: Skill[] = [
     category: "frameworks",
     brandColor: "#339933",
   },
-  {
-    name: "Godot Engine",
-    icon: "godot",
-    description: "Game development with open-source engine, scripting and scene design.",
-    category: "frameworks",
-    brandColor: "#478CBF",
-  },
-  {
+{
     name: "Tailwind CSS",
     icon: "tailwind",
     description: "Utility-first CSS framework for rapid and consistent UI development.",

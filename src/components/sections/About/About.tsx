@@ -12,7 +12,6 @@ import Marquee from "@/components/ui/Marquee/Marquee";
 import { BsGeoAlt } from "react-icons/bs";
 import {
   SiTypescript,
-  SiGodotengine,
   SiLinux,
   SiGnubash,
   SiDocker,
@@ -28,7 +27,6 @@ import type { IconType } from "react-icons";
 /* ─── Icon config for skill pills ─── */
 const iconConfig: Record<string, IconType> = {
   typescript: SiTypescript,
-  godot: SiGodotengine,
   linux: SiLinux,
   shell: SiGnubash,
   docker: SiDocker,
@@ -44,7 +42,41 @@ const iconConfig: Record<string, IconType> = {
 const sidebarLinks = [
   { key: "intro", id: "about-section" },
   { key: "experience", id: "experience-section" },
+  { key: "certificates", id: "certificates-section" },
   { key: "skills", id: "skills-section" },
+];
+
+const certificates = [
+  {
+    image: "/images/certificados/175093.jpg",
+    title: "Usabilidade, Dev Web, Mobile e Jogos",
+    institution: "IBMR",
+    tag: "160h",
+  },
+  {
+    image: "/images/certificados/1750976520133.jpg",
+    title: "Teoria da Computação e Compiladores",
+    institution: "IBMR",
+    tag: "IA 160h",
+  },
+  {
+    image: "/images/certificados/34536.jpg",
+    title: "Azure Cloud Computing com IA",
+    institution: "São Judas / IBMR",
+    tag: "Cloud 30h",
+  },
+  {
+    image: "/images/certificados/45645.jpg",
+    title: "Programação de Soluções Computacionais",
+    institution: "IBMR / Oracle Academy",
+    tag: "Oracle 160h",
+  },
+  {
+    image: "/images/certificados/4564566.jpg",
+    title: "Sistemas Computacionais e Segurança",
+    institution: "IBMR",
+    tag: "Segurança 160h",
+  },
 ];
 
 /* ─── Skill Pill ─── */
@@ -74,6 +106,84 @@ function SkillPill({ skill }: { skill: Skill }) {
       <span className="text-sm font-medium text-white/80 whitespace-nowrap transition-colors duration-300 group-hover:text-white">
         {skill.name}
       </span>
+    </div>
+  );
+}
+
+/* ─── Certificates Carousel (scroll hijacking with sticky) ─── */
+function CertificatesCarousel({ title, subtitle }: { title: string; subtitle: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const totalCards = certificates.length;
+  const cardWidth = 380;
+  const gap = 24;
+  const totalTrack = totalCards * cardWidth + (totalCards - 1) * gap;
+  const maxTranslate = totalTrack - cardWidth;
+  // Extra vertical height so user has to scroll through ALL cards
+  const sectionHeight = totalTrack + 500;
+
+  const x = useTransform(scrollYProgress, [0.05, 0.95], [0, -maxTranslate]);
+  const progressWidth = useTransform(scrollYProgress, [0.05, 0.95], ["0%", "100%"]);
+
+  return (
+    <div
+      ref={containerRef}
+      style={{ height: `${sectionHeight}px` }}
+    >
+      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
+        <div className="mb-6 pl-1">
+          <SectionTitle>{title}</SectionTitle>
+          <p className="text-ios-text-secondary text-sm">
+            {subtitle}
+          </p>
+        </div>
+
+        <motion.div className="flex gap-6" style={{ x }}>
+          {certificates.map((cert, i) => (
+            <div
+              key={i}
+              className="shrink-0 w-[380px] rounded-2xl border border-ios-border bg-ios-glass backdrop-blur-xl overflow-hidden transition-all duration-300 hover:border-white/20 hover:scale-[1.02]"
+            >
+              <div className="relative w-full aspect-[4/3]">
+                <Image
+                  src={cert.image}
+                  alt={cert.title}
+                  fill
+                  sizes="380px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5">
+                <h4 className="text-base font-semibold text-white mb-1 leading-snug">
+                  {cert.title}
+                </h4>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-ios-text-secondary">
+                    {cert.institution}
+                  </span>
+                  <span className="text-[11px] text-ios-accent border border-ios-accent/30 rounded-full px-2.5 py-0.5 font-medium">
+                    {cert.tag}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Progress bar — centered, Arthur style */}
+        <div className="flex justify-center mt-8">
+          <div className="w-full max-w-[400px] h-[4px] bg-white/10 rounded-full overflow-hidden">
+            <motion.div
+              className="h-full bg-ios-accent rounded-full"
+              style={{ width: progressWidth }}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -274,6 +384,14 @@ export default function About() {
                 );
               })}
             </div>
+          </div>
+
+          {/* ─── Certificações ─── */}
+          <div id="certificates-section" className="mb-16 scroll-mt-24">
+            <CertificatesCarousel
+              title={t("about.certificatesTitle")}
+              subtitle={t("about.certificatesSubtitle")}
+            />
           </div>
 
           {/* ─── Expertise Técnica ─── */}

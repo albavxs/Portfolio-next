@@ -28,12 +28,15 @@
     "sidebar": {
       "intro": "Sobre Mim",
       "experience": "Experiência",
+      "certificates": "Certificações",
       "skills": "Expertise Técnica"
     },
     "introTitle": "Sobre Mim",
     "rolePrefix": "Desenvolvedor",
     "roleHighlight": "Full Stack",
-    "bio": "Eu sou o Paulo Guilherme, desenvolvedor Full Stack. Meu objetivo é transformar requisitos em interfaces claras, arquiteturas sustentáveis e sistemas que funcionam bem em produção.",
+    "bio": "Eu sou o Paulo Guilherme, estudante de Ciência da Computação na IBMR e desenvolvedor Full Stack. Meu objetivo é transformar requisitos em interfaces claras, arquiteturas sustentáveis e sistemas inovadores que agregem experiência ao usuário.",
+    "certificatesTitle": "Certificações",
+    "certificatesSubtitle": "Role para navegar pelos certificados",
     "experienceTitle": "Experiência Profissional",
     "skillsTitle": "Expertise Técnica"
   },
@@ -46,7 +49,7 @@
     "entries": [
       {
         "dateRange": "Nov 2025 - Presente",
-        "title": "Desenvolvedor Full Stack (CLT)",
+        "title": "Desenvolvedor Full Stack",
         "company": "Few Company",
         "description": "Promovido para desenvolvedor em tempo integral, responsável por soluções web end-to-end e arquitetura de sistemas.",
         "bullets": [
@@ -58,7 +61,7 @@
       },
       {
         "dateRange": "Abr 2025 - Nov 2025",
-        "title": "Engenheiro de QA",
+        "title": "Analista de Qualidade (QA)",
         "company": "Lance",
         "description": "Focado em garantia de qualidade, testes automatizados e confiabilidade de software.",
         "bullets": [
@@ -78,6 +81,18 @@
           "Manutenção e otimização de plataformas web existentes",
           "Implementação de designs responsivos e acessíveis",
           "Comunicação direta com stakeholders para levantamento de requisitos"
+        ]
+      },
+      {
+        "dateRange": "Mar 2024 - Fev 2025",
+        "title": "Desenvolvedor Full Stack (Freelancer)",
+        "company": "Freelancer de Projetos",
+        "description": "Desenvolvimento freelance de projetos web para diversos clientes.",
+        "bullets": [
+          "Desenvolvimento full stack de aplicações web do zero",
+          "Comunicação direta com clientes e levantamento de requisitos",
+          "Entrega de soluções responsivas e funcionais",
+          "Escolha de stack tecnológica baseada nas necessidades do projeto"
         ]
       }
     ]

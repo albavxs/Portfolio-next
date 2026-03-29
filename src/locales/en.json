@@ -12,7 +12,7 @@
     "subtitleMid": "Developer with over",
     "subtitleBold2": "2 years of experience",
     "subtitleEnd": "building modern and high-performance web applications.",
-    "downloadCv": "Download CV",
+    "downloadCv": "My Resume",
     "codeBlock": {
       "name": "Paulo Guilherme Alves",
       "role": "Full Stack Developer",
@@ -28,12 +28,15 @@
     "sidebar": {
       "intro": "About Me",
       "experience": "Experience",
+      "certificates": "Certificates",
       "skills": "Technical Expertise"
     },
     "introTitle": "About Me",
     "rolePrefix": "",
     "roleHighlight": "Full Stack Developer",
-    "bio": "I'm Paulo Guilherme, a Full Stack Developer. My goal is to transform requirements into clear interfaces, sustainable architectures, and systems that work well in production.",
+    "bio": "I'm Paulo Guilherme, a Computer Science student at IBMR and Full Stack Developer. My goal is to transform requirements into clear interfaces, sustainable architectures, and innovative systems that deliver great user experiences.",
+    "certificatesTitle": "Certificates",
+    "certificatesSubtitle": "Scroll to browse certificates",
     "experienceTitle": "Professional Experience",
     "skillsTitle": "Technical Expertise"
   },
@@ -46,7 +49,7 @@
     "entries": [
       {
         "dateRange": "Nov 2025 - Present",
-        "title": "Full Stack Developer (Full-time)",
+        "title": "Full Stack Developer",
         "company": "Few Company",
         "description": "Promoted to full-time developer, responsible for end-to-end web solutions and system architecture.",
         "bullets": [
@@ -58,7 +61,7 @@
       },
       {
         "dateRange": "Apr 2025 - Nov 2025",
-        "title": "QA Engineer",
+        "title": "Quality Analyst (QA)",
         "company": "Lance",
         "description": "Focused on quality assurance, automated testing, and ensuring software reliability.",
         "bullets": [
@@ -78,6 +81,18 @@
           "Maintenance and optimization of existing web platforms",
           "Implementation of responsive and accessible designs",
           "Direct communication with stakeholders for requirements gathering"
+        ]
+      },
+      {
+        "dateRange": "Mar 2024 - Feb 2025",
+        "title": "Full Stack Developer (Freelancer)",
+        "company": "Freelance Projects",
+        "description": "Freelance development of web projects for various clients.",
+        "bullets": [
+          "Full stack development of web applications from scratch",
+          "Direct client communication and requirements gathering",
+          "Delivery of responsive and functional solutions",
+          "Technology stack selection based on project needs"
         ]
       }
     ]
