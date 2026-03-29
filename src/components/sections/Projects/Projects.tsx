@@ -2,26 +2,29 @@
 
 import { useState } from "react";
 import { projects, type Project } from "@/data/projects";
+import { useLanguage } from "@/contexts/LanguageContext";
 import FadeUp from "@/components/motion/FadeUp";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "@/components/ui/ProjectModal/ProjectModal";
 
 export default function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
+  const { t } = useLanguage();
 
   return (
-    <section id="projects-section" className="w-full flex flex-col items-center">
+    <section id="projects-section" className="w-full flex flex-col items-center px-6 py-24">
       <FadeUp>
-        <h2 className="text-[32px] font-bold text-white text-center mt-[60px] mb-[30px] md:text-2xl md:mt-10 md:mb-5">
-          Projects
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          {t("projects.sectionTitle")}
         </h2>
       </FadeUp>
 
-      <div className="grid grid-cols-2 gap-[25px] w-[90%] max-w-[1000px] px-5 max-[768px]:grid-cols-1">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[1000px]">
         {projects.map((project, i) => (
           <FadeUp key={project.title} delay={i * 100}>
             <ProjectCard
               project={project}
+              index={i}
               onClick={() => setSelected(project)}
             />
           </FadeUp>

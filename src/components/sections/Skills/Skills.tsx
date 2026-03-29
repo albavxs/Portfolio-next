@@ -4,50 +4,62 @@ import Image from "next/image";
 import { skills, type Skill } from "@/data/skills";
 import FadeUp from "@/components/motion/FadeUp";
 import Marquee from "@/components/ui/Marquee/Marquee";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   SiTypescript,
   SiGodotengine,
   SiLinux,
   SiGnubash,
   SiDocker,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiGit,
+  SiPostgresql,
+  SiMongodb,
+  SiSupabase,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 
-const iconConfig: Record<string, { Icon: IconType; color: string }> = {
-  typescript: { Icon: SiTypescript, color: "#3178C6" },
-  godot: { Icon: SiGodotengine, color: "#478CBF" },
-  linux: { Icon: SiLinux, color: "#FCC624" },
-  shell: { Icon: SiGnubash, color: "#4EAA25" },
-  docker: { Icon: SiDocker, color: "#2496ED" },
+const iconConfig: Record<string, IconType> = {
+  typescript: SiTypescript,
+  godot: SiGodotengine,
+  linux: SiLinux,
+  shell: SiGnubash,
+  docker: SiDocker,
+  nextjs: SiNextdotjs,
+  tailwind: SiTailwindcss,
+  git: SiGit,
+  postgresql: SiPostgresql,
+  mongodb: SiMongodb,
+  supabase: SiSupabase,
 };
 
 function SkillPill({ skill }: { skill: Skill }) {
-  const config = iconConfig[skill.icon];
+  const Icon = iconConfig[skill.icon];
 
   return (
     <div
-      className="group flex items-center gap-3 px-4 py-2 min-w-[140px] transition-all duration-300 hover:scale-110 hover:[filter:drop-shadow(0_0_8px_rgba(125,92,56,0.4))]"
+      className="group flex items-center gap-3 px-5 py-3 min-w-[150px] rounded-2xl bg-ios-glass-solid border border-ios-border backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:border-[var(--brand)]/40 hover:shadow-[0_0_20px_var(--brand-glow)]"
+      style={{
+        ["--brand" as string]: skill.brandColor,
+        ["--brand-glow" as string]: `${skill.brandColor}25`,
+      }}
       title={skill.description}
     >
       {skill.icon.startsWith("/") ? (
         <Image
           src={skill.icon}
           alt={skill.name}
-          width={40}
-          height={40}
+          width={36}
+          height={36}
           className="object-contain grayscale brightness-200 transition-all duration-300 group-hover:grayscale-0 group-hover:brightness-100"
         />
-      ) : config ? (
-        <config.Icon
-          className="w-10 h-10 text-white/70 transition-colors duration-300 group-hover:[color:var(--skill-color)]"
-          style={
-            {
-              "--skill-color": config.color,
-            } as React.CSSProperties
-          }
+      ) : Icon ? (
+        <Icon
+          className="w-9 h-9 text-white/60 transition-colors duration-300 group-hover:text-[var(--brand)]"
         />
       ) : null}
-      <span className="text-sm font-medium text-white whitespace-nowrap">
+      <span className="text-sm font-medium text-white/80 whitespace-nowrap transition-colors duration-300 group-hover:text-white">
         {skill.name}
       </span>
     </div>
@@ -55,29 +67,46 @@ function SkillPill({ skill }: { skill: Skill }) {
 }
 
 export default function Skills() {
-  const row1 = skills.slice(0, 6);
-  const row2 = skills.slice(6);
+  const { t } = useLanguage();
+
+  const languages = skills.filter((s) => s.category === "languages");
+  const frameworks = skills.filter((s) => s.category === "frameworks");
+  const infra = skills.filter((s) => s.category === "infra");
 
   return (
-    <section className="w-full flex flex-col items-center">
+    <section id="skills-section" className="w-full flex flex-col items-center py-24">
       <FadeUp>
-        <h2
-          id="skills-section"
-          className="text-[32px] font-bold text-white text-center mt-[60px] mb-[30px] md:text-2xl md:mt-10 md:mb-5"
-        >
-          Skills
-        </h2>
+        <div className="text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+            {t("skills.sectionTitle")}
+          </h2>
+          <p className="text-ios-text-secondary text-base">
+            {t("skills.subtitle")}
+          </p>
+        </div>
       </FadeUp>
 
-      <div className="w-full flex flex-col gap-4 max-w-[1200px] [perspective:800px]">
-        <Marquee direction="left" speed={35} pauseOnHover className="[transform:translateZ(0px)]">
-          {row1.map((skill) => (
+      <FadeUp delay={100}>
+        <span className="inline-block mb-10 text-sm font-semibold text-ios-accent border border-ios-accent/30 rounded-full px-4 py-1.5">
+          {t("skills.counter")}
+        </span>
+      </FadeUp>
+
+      <div className="w-full flex flex-col gap-5 max-w-[1200px]">
+        <Marquee direction="left" speed={35} pauseOnHover>
+          {languages.map((skill) => (
             <SkillPill key={skill.name} skill={skill} />
           ))}
         </Marquee>
 
-        <Marquee direction="right" speed={40} pauseOnHover className="[transform:translateZ(-60px)_scale(0.92)] opacity-60 blur-[0.5px]">
-          {row2.map((skill) => (
+        <Marquee direction="right" speed={40} pauseOnHover>
+          {frameworks.map((skill) => (
+            <SkillPill key={skill.name} skill={skill} />
+          ))}
+        </Marquee>
+
+        <Marquee direction="left" speed={35} pauseOnHover>
+          {infra.map((skill) => (
             <SkillPill key={skill.name} skill={skill} />
           ))}
         </Marquee>

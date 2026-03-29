@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "name": "Paulo Guilherme",
+    "subtitlePre": "Desenvolvedor",
+    "subtitleBold1": "Full Stack",
+    "subtitleMid": "com mais de",
+    "subtitleBold2": "2 anos de experiência",
+    "subtitleEnd": "construindo aplicações web modernas e performáticas.",
+    "downloadCv": "Baixar CV",
+    "codeBlock": {
+      "name": "Paulo Guilherme Alves",
+      "role": "Full Stack Developer",
+      "experience": "2+ anos",
+      "location": "Rio de Janeiro, RJ",
+      "education": "Ciência da Computação - IBMR",
+      "available": "true"
+    }
+  },
+  "about": {
+    "location": "Rio de Janeiro, RJ",
+    "university": "IBMR - Ciência da Computação",
+    "sidebar": {
+      "intro": "Sobre Mim",
+      "experience": "Experiência",
+      "skills": "Expertise Técnica"
+    },
+    "introTitle": "Sobre Mim",
+    "rolePrefix": "Desenvolvedor",
+    "roleHighlight": "Full Stack",
+    "bio": "Eu sou o Paulo Guilherme, desenvolvedor Full Stack. Meu objetivo é transformar requisitos em interfaces claras, arquiteturas sustentáveis e sistemas que funcionam bem em produção.",
+    "experienceTitle": "Experiência Profissional",
+    "skillsTitle": "Expertise Técnica"
+  },
+  "skills": {
+    "languages": "Linguagens",
+    "frameworks": "Frameworks & Runtime",
+    "infra": "Infra, DB & Tools"
+  },
+  "experience": {
+    "entries": [
+      {
+        "dateRange": "Nov 2025 - Presente",
+        "title": "Desenvolvedor Full Stack (CLT)",
+        "company": "Few Company",
+        "description": "Promovido para desenvolvedor em tempo integral, responsável por soluções web end-to-end e arquitetura de sistemas.",
+        "bullets": [
+          "Desenvolvimento de soluções web end-to-end com React e Node.js",
+          "Arquitetura de sistemas e definição de padrões técnicos",
+          "Integração de APIs REST e gerenciamento de banco de dados",
+          "Mentoria técnica e revisão de código da equipe"
+        ]
+      },
+      {
+        "dateRange": "Abr 2025 - Nov 2025",
+        "title": "Engenheiro de QA",
+        "company": "Lance",
+        "description": "Focado em garantia de qualidade, testes automatizados e confiabilidade de software.",
+        "bullets": [
+          "Criação e execução de planos de teste automatizados",
+          "Identificação e documentação de bugs e regressões",
+          "Colaboração com equipe de desenvolvimento para melhoria contínua",
+          "Garantia de qualidade em múltiplas plataformas"
+        ]
+      },
+      {
+        "dateRange": "Fev 2025 - Nov 2025",
+        "title": "Desenvolvedor Full Stack (Freelance)",
+        "company": "Few Company",
+        "description": "Início como freelancer desenvolvendo funcionalidades customizadas e mantendo plataformas existentes.",
+        "bullets": [
+          "Desenvolvimento de funcionalidades customizadas para clientes",
+          "Manutenção e otimização de plataformas web existentes",
+          "Implementação de designs responsivos e acessíveis",
+          "Comunicação direta com stakeholders para levantamento de requisitos"
+        ]
+      }
+    ]
+  },
+  "org": {
+    "title": "Comunidade de Desenvolvimento Open Source",
+    "description": "Como fundador da comunidade, meu objetivo é conectar desenvolvedores para contribuir em projetos open source e incentivar o aprendizado prático. Compartilhamos conhecimento, revisamos código e construímos projetos reais juntos.",
+    "communityLabel": "Organização · GitHub",
+    "roleShort": "Fundador",
+    "profileBio": "Full Stack Developer, Open Source & Comunidade",
+    "cta": "Entrar na comunidade"
+  },
+  "projects": {
+    "sectionTitle": "Projetos",
+    "viewCode": "Código",
+    "liveDemo": "Demo",
+    "entries": [
+      {
+        "title": "AlgoriUI",
+        "description": "Plataforma open-source que permite aprender sobre algoritmos de forma interativa e visual, com técnica de aprendizado inspirada no livro Entendendo Algoritmos.",
+        "details": "Uma ferramenta educacional que dá vida a algoritmos e estruturas de dados através de representações visuais passo a passo. Usuários podem explorar algoritmos de ordenação, árvores de busca, listas encadeadas e mais — assistindo cada operação se desenrolar em tempo real. Construída para tornar fundamentos de CS acessíveis e envolventes."
+      },
+      {
+        "title": "SharkType",
+        "description": "Plataforma de typing focada em stacks de tecnologia, que ensina o usuário sobre o que está digitando através de 'perguntas invertidas' — perguntas que explicam ao usuário.",
+        "details": "Uma plataforma de treino de digitação rápida com o diferencial de ser focada em stacks de tecnologia. Utiliza o conceito de 'pergunta invertida' para ensinar enquanto o usuário pratica. Em desenvolvimento ativo, com planos de gamificação, leaderboard e sistema de progressão."
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Vamos Conversar",
+    "subtitle": "Aberto para oportunidades, projetos freelas e conexões na área de tecnologia. Sinta-se à vontade para entrar em contato pelos canais abaixo.",
+    "contactInfo": "Informações de contato",
+    "available": "Disponível para conversas",
+    "phone": "Telefone",
+    "whatsapp": "WhatsApp",
+    "email": "E-mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "copyright": "© 2025 Paulo Guilherme. Todos os direitos reservados."
+  }
+}
