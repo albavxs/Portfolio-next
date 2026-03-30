@@ -8,14 +8,14 @@
   "hero": {
     "name": "Paulo Guilherme",
     "subtitlePre": "",
-    "subtitleBold1": "Full Stack",
+    "subtitleBold1": "Software",
     "subtitleMid": "Developer with over",
     "subtitleBold2": "2 years of experience",
-    "subtitleEnd": "building modern and high-performance web applications.",
+    "subtitleEnd": "turning ideas into complete applications, from interface to infrastructure, focused on performance, scalability, and user experience.",
     "downloadCv": "My Resume",
     "codeBlock": {
       "name": "Paulo Guilherme Alves",
-      "role": "Full Stack Developer",
+      "role": "Software Developer",
       "experience": "2+ years",
       "location": "Rio de Janeiro, RJ",
       "education": "Computer Science - IBMR",
@@ -33,8 +33,8 @@
     },
     "introTitle": "About Me",
     "rolePrefix": "",
-    "roleHighlight": "Full Stack Developer",
-    "bio": "I'm Paulo Guilherme, a Computer Science student at IBMR and Full Stack Developer. My goal is to transform requirements into clear interfaces, sustainable architectures, and innovative systems that deliver great user experiences.",
+    "roleHighlight": "Software Developer",
+    "bio": "I'm Paulo Guilherme, a Computer Science student at IBMR and Software Developer. My goal is to transform requirements into clear interfaces, sustainable architectures, and innovative systems that deliver great user experiences.",
     "certificatesTitle": "Certificates",
     "certificatesSubtitle": "Scroll to browse certificates",
     "experienceTitle": "Professional Experience",
@@ -53,22 +53,22 @@
         "company": "Few Company",
         "description": "Promoted to full-time developer, responsible for end-to-end web solutions and system architecture.",
         "bullets": [
-          "End-to-end web development with React and Node.js",
-          "System architecture and technical standards definition",
-          "REST API integration and database management",
-          "Technical mentoring and team code reviews"
+          "Developed end-to-end solutions with React, Next.js, and RESTful APIs in Node.js",
+          "Implemented secure authentication flows and integrated PostgreSQL and Supabase databases",
+          "Built 5+ responsive interfaces with Tailwind CSS focused on UX best practices",
+          "Contributed to architectural decisions, code reviews, and Git versioning standards"
         ]
       },
       {
-        "dateRange": "Apr 2025 - Nov 2025",
-        "title": "Quality Analyst (QA)",
-        "company": "Lance",
+        "dateRange": "Mar 2025 - Nov 2025",
+        "title": "Quality Assurance Analyst (QA)",
+        "company": "Lance Web",
         "description": "Focused on quality assurance, automated testing, and ensuring software reliability.",
         "bullets": [
-          "Creation and execution of automated test plans",
-          "Bug identification and regression documentation",
-          "Collaboration with development team for continuous improvement",
-          "Quality assurance across multiple platforms"
+          "Designed and executed manual and automated tests using Cypress",
+          "Documented bugs and collaborated with developers for timely fixes",
+          "Ensured delivery quality with focus on performance, usability, and security",
+          "Utilized Postman, Jira, Bitbucket, and CI/CD pipelines"
         ]
       },
       {
@@ -77,22 +77,23 @@
         "company": "Few Company",
         "description": "Started as a freelancer developing custom features and maintaining existing platforms.",
         "bullets": [
-          "Custom feature development for clients",
-          "Maintenance and optimization of existing web platforms",
-          "Implementation of responsive and accessible designs",
-          "Direct communication with stakeholders for requirements gathering"
+          "Developed custom features for clients",
+          "Maintained and optimized existing web platforms",
+          "Implemented responsive and accessible designs",
+          "Communicated directly with stakeholders for requirements gathering",
+          "Built mobile applications with React and Expo"
         ]
       },
       {
-        "dateRange": "Mar 2024 - Feb 2025",
-        "title": "Full Stack Developer (Freelancer)",
-        "company": "Freelance Projects",
+        "dateRange": "Feb 2024 - Feb 2025",
+        "title": "Software Developer (Freelance Projects)",
+        "company": "Remote",
         "description": "Freelance development of web projects for various clients.",
         "bullets": [
-          "Full stack development of web applications from scratch",
-          "Direct client communication and requirements gathering",
-          "Delivery of responsive and functional solutions",
-          "Technology stack selection based on project needs"
+          "Built full stack web applications from scratch",
+          "Communicated directly with clients for requirements gathering",
+          "Delivered responsive and functional solutions",
+          "Selected technology stacks based on project needs"
         ]
       }
     ]
@@ -102,7 +103,7 @@
     "description": "As the community founder, my goal is to connect developers to contribute to open source projects and encourage hands-on learning. We share knowledge, review code, and build real projects together.",
     "communityLabel": "Organization · GitHub",
     "roleShort": "Founder",
-    "profileBio": "Full Stack Developer, Open Source & Community",
+    "profileBio": "Software Developer, Open Source & Community",
     "cta": "Join the community"
   },
   "projects": {

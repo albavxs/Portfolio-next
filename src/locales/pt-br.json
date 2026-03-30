@@ -7,15 +7,15 @@
   },
   "hero": {
     "name": "Paulo Guilherme",
-    "subtitlePre": "Desenvolvedor",
-    "subtitleBold1": "Full Stack",
+    "subtitlePre": "",
+    "subtitleBold1": "Desenvolvedor de Software",
     "subtitleMid": "com mais de",
     "subtitleBold2": "2 anos de experiência",
-    "subtitleEnd": "construindo aplicações web modernas e performáticas.",
+    "subtitleEnd": "transformando ideias em aplicações completas, da interface à infraestrutura, com foco em performance, escalabilidade e experiência do usuário.",
     "downloadCv": "Baixar CV",
     "codeBlock": {
       "name": "Paulo Guilherme Alves",
-      "role": "Full Stack Developer",
+      "role": "Desenvolvedor de Software",
       "experience": "2+ anos",
       "location": "Rio de Janeiro, RJ",
       "education": "Ciência da Computação - IBMR",
@@ -32,9 +32,9 @@
       "skills": "Expertise Técnica"
     },
     "introTitle": "Sobre Mim",
-    "rolePrefix": "Desenvolvedor",
-    "roleHighlight": "Full Stack",
-    "bio": "Eu sou o Paulo Guilherme, estudante de Ciência da Computação na IBMR e desenvolvedor Full Stack. Meu objetivo é transformar requisitos em interfaces claras, arquiteturas sustentáveis e sistemas inovadores que agregem experiência ao usuário.",
+    "rolePrefix": "",
+    "roleHighlight": "Desenvolvedor de Software",
+    "bio": "Eu sou o Paulo Guilherme, estudante de Ciência da Computação na IBMR e Desenvolvedor de Software. Meu objetivo é transformar requisitos em interfaces claras, arquiteturas sustentáveis e sistemas inovadores que agregem experiência ao usuário.",
     "certificatesTitle": "Certificações",
     "certificatesSubtitle": "Role para navegar pelos certificados",
     "experienceTitle": "Experiência Profissional",
@@ -53,22 +53,22 @@
         "company": "Few Company",
         "description": "Promovido para desenvolvedor em tempo integral, responsável por soluções web end-to-end e arquitetura de sistemas.",
         "bullets": [
-          "Desenvolvimento de soluções web end-to-end com React e Node.js",
-          "Arquitetura de sistemas e definição de padrões técnicos",
-          "Integração de APIs REST e gerenciamento de banco de dados",
-          "Mentoria técnica e revisão de código da equipe"
+          "Desenvolvimento de soluções end-to-end com React, Next.js e APIs RESTful em Node.js",
+          "Implementação de autenticação segura e integração com PostgreSQL e Supabase",
+          "Criação de 5+ interfaces responsivas com Tailwind CSS focadas em UX",
+          "Participação em decisões arquiteturais, code review e versionamento com Git"
         ]
       },
       {
-        "dateRange": "Abr 2025 - Nov 2025",
+        "dateRange": "Mar 2025 - Nov 2025",
         "title": "Analista de Qualidade (QA)",
-        "company": "Lance",
+        "company": "Lance Web",
         "description": "Focado em garantia de qualidade, testes automatizados e confiabilidade de software.",
         "bullets": [
-          "Criação e execução de planos de teste automatizados",
-          "Identificação e documentação de bugs e regressões",
-          "Colaboração com equipe de desenvolvimento para melhoria contínua",
-          "Garantia de qualidade em múltiplas plataformas"
+          "Elaboração e execução de testes manuais e automatizados com Cypress",
+          "Documentação de bugs e colaboração com desenvolvedores para correções rápidas",
+          "Garantia de qualidade com foco em performance, usabilidade e segurança",
+          "Utilização de Postman, Jira, Bitbucket e pipelines de CI/CD"
         ]
       },
       {
@@ -80,13 +80,14 @@
           "Desenvolvimento de funcionalidades customizadas para clientes",
           "Manutenção e otimização de plataformas web existentes",
           "Implementação de designs responsivos e acessíveis",
-          "Comunicação direta com stakeholders para levantamento de requisitos"
+          "Comunicação direta com stakeholders para levantamento de requisitos",
+          "Desenvolvimento mobile com React e Expo"
         ]
       },
       {
-        "dateRange": "Mar 2024 - Fev 2025",
-        "title": "Desenvolvedor Full Stack (Freelancer)",
-        "company": "Freelancer de Projetos",
+        "dateRange": "Fev 2024 - Fev 2025",
+        "title": "Desenvolvedor de Software (Freelancer de Projetos)",
+        "company": "Remoto",
         "description": "Desenvolvimento freelance de projetos web para diversos clientes.",
         "bullets": [
           "Desenvolvimento full stack de aplicações web do zero",
@@ -102,7 +103,7 @@
     "description": "Como fundador da comunidade, meu objetivo é conectar desenvolvedores para contribuir em projetos open source e incentivar o aprendizado prático. Compartilhamos conhecimento, revisamos código e construímos projetos reais juntos.",
     "communityLabel": "Organização · GitHub",
     "roleShort": "Fundador",
-    "profileBio": "Full Stack Developer, Open Source & Comunidade",
+    "profileBio": "Desenvolvedor de Software, Open Source & Comunidade",
     "cta": "Entrar na comunidade"
   },
   "projects": {

@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Paulo Guilherme | Portfolio",
-  description: "Full Stack Developer — Transforming ideas into efficient, responsive, and intuitive technological solutions.",
+  description: "Software Developer — Transforming ideas into efficient, responsive, and intuitive technological solutions.",
   icons: {
     icon: "/images/profile/thumbnail_Image.jpeg",
   },

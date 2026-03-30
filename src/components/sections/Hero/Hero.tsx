@@ -50,7 +50,7 @@ function CodeBlock() {
       <div className="p-6 font-mono text-[13px] leading-relaxed overflow-x-auto">
         <div className="text-ios-text-secondary">
           <span className="text-[#ff7b72]">const</span>{" "}
-          <span className="text-[#d2a8ff]">FullStackDeveloper</span>{" "}
+          <span className="text-[#d2a8ff]">SoftwareDeveloper</span>{" "}
           <span className="text-[#ff7b72]">=</span>{" "}
           <span className="text-ios-text-secondary">{"{"}</span>
         </div>
@@ -111,7 +111,7 @@ function CodeArray({ label, values }: { label: string; values: string[] }) {
 
 export default function Hero() {
   const { lang, t } = useLanguage();
-  const resumeUrl = lang === "en" ? "/resume/PauloGuilherme_CV_EN-1.pdf" : "/resume/PauloGuilherme_CV_PTBR-1.pdf";
+  const resumeUrl = lang === "en" ? "/resume/PauloGuilherme_CV_EN.pdf" : "/resume/PauloGuilherme_CV_PTBR.pdf";
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLObjectElement>(null);
