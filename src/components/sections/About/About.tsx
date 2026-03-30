@@ -226,16 +226,14 @@ export default function About() {
         {/* ── Sidebar ── */}
         <aside className="lg:sticky lg:top-[30vh] lg:self-start shrink-0 w-full lg:w-[260px]">
           <div className="flex flex-col items-center text-center">
-            <div className="[perspective:800px] mb-4">
-              <div className="transition-transform duration-500 hover:[transform:rotateY(5deg)_rotateX(2deg)]">
-                <Image
-                  src="/images/profile/thumbnail_Image.jpeg"
-                  alt="Paulo Guilherme"
-                  width={180}
-                  height={180}
-                  className="rounded-2xl object-cover border-2 border-ios-border shadow-[0_20px_40px_rgba(0,0,0,0.3)] w-[140px] h-[140px] sm:w-[180px] sm:h-[180px]"
-                />
-              </div>
+            <div className="mb-4">
+              <Image
+                src="/images/profile/thumbnail_Image.jpeg"
+                alt="Paulo Guilherme"
+                width={180}
+                height={180}
+                className="rounded-2xl object-cover border-2 border-ios-border shadow-[0_20px_40px_rgba(0,0,0,0.3)] w-[140px] h-[140px] sm:w-[180px] sm:h-[180px]"
+              />
             </div>
 
             <p className="text-base sm:text-lg font-bold text-white">Paulo Guilherme</p>

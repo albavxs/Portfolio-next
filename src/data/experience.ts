@@ -12,7 +12,7 @@ export const experience: ExperienceEntry[] = [
     dateRange: "Nov 2025 - Present",
     title: "Full Stack Developer",
     company: "Few Company",
-    description: "Promoted to full-time developer, responsible for end-to-end web solutions and system architecture.",
+    description: "Soluções web e mobile com Next.js e React, automações low-code e com Python, desenvolvimento de ferramentas próprias, arquitetura de sistemas com Docker e Linux.",
     bullets: [
       "End-to-end web development with React and Node.js",
       "System architecture and technical standards definition",
