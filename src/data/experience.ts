@@ -12,7 +12,7 @@ export const experience: ExperienceEntry[] = [
     dateRange: "Nov 2025 - Present",
     title: "Full Stack Developer",
     company: "Few Company",
-    description: "Soluções web e mobile com Next.js e React, automações low-code e com Python, desenvolvimento de ferramentas próprias, arquitetura de sistemas com Docker e Linux.",
+    description: "Soluções web e mobile com Next.js e React, implementações em Next.js, automações low-code e com Python, desenvolvimento de ferramentas próprias, arquitetura de sistemas com Docker e Linux.",
     bullets: [
       "End-to-end web development with React and Node.js",
       "System architecture and technical standards definition",
@@ -25,12 +25,12 @@ export const experience: ExperienceEntry[] = [
     dateRange: "Apr 2025 - Nov 2025",
     title: "Quality Analyst (QA)",
     company: "Lance",
-    description: "Focused on quality assurance, automated testing, and ensuring software reliability.",
+    description: "Quality assurance, automated testing, CI/CD pipelines, deploys automatizados e garantia de confiabilidade do software.",
     bullets: [
       "Creation and execution of automated test plans",
+      "CI/CD pipeline configuration and automated deploys",
       "Bug identification and regression documentation",
       "Collaboration with development team for continuous improvement",
-      "Quality assurance across multiple platforms",
     ],
     techBadges: ["Postman", "Selenium", "Jira", "JavaScript", "Python"],
   },

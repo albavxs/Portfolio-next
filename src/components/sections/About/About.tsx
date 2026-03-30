@@ -228,7 +228,7 @@ export default function About() {
           <div className="flex flex-col items-center text-center">
             <div className="mb-4">
               <Image
-                src="/images/profile/thumbnail_Image.jpeg"
+                src="/images/screenshots/pege.jpeg"
                 alt="Paulo Guilherme"
                 width={180}
                 height={180}
@@ -277,11 +277,6 @@ export default function About() {
           <div id="about-section" className="mb-12 sm:mb-16 scroll-mt-24">
             <FadeUp>
               <SectionTitle>{t("about.introTitle")}</SectionTitle>
-
-              <p className="text-ios-text-secondary text-sm sm:text-base leading-relaxed mb-2">
-                {t("about.rolePrefix")}{" "}
-                <span className="font-semibold text-ios-accent">{t("about.roleHighlight")}</span>
-              </p>
 
               <p className="text-ios-text-secondary text-sm sm:text-base leading-relaxed mb-5">
                 {t("about.bio")}
