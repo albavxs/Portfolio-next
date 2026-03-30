@@ -23,11 +23,11 @@ export const projects: Project[] = [
   {
     title: "SharkType",
     description:
-      "Typing platform focused on tech stacks with 'inverted questions' that teach while you type.",
+      "Typing platform for developers with code and text tracks, progression, and an immersive interface.",
     details:
-      "A typing practice platform with the unique focus on technology stacks. Uses the 'inverted question' concept to teach while the user practices. Under active development, with plans for gamification, leaderboard, and progression system.",
-    tech: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
-    githubUrl: "https://github.com/albavxs/sharktype",
+      "A typing practice platform built around real programming content. SharkType lets users train with code snippets and multilingual text tracks, switch difficulty and themes, and track XP, levels, streaks, and session history in an interface enhanced with sound feedback and 3D visuals.",
+    tech: ["TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Three.js"],
+    githubUrl: "https://github.com/albavxs/SharkType",
     deployUrl: "https://shark-type-io.vercel.app/",
     screenshot: "/images/screenshots/sharktype.png",
   },

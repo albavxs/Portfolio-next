@@ -40,7 +40,7 @@ export default function ProjectCard({ project, index, onClick }: Props) {
       aria-label={project.title}
       onClick={onClick}
       onKeyDown={handleKeyDown}
-      className="group cursor-pointer rounded-[20px] bg-ios-glass-solid backdrop-blur-[20px] border border-ios-border overflow-hidden flex flex-col transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-ios-glass-hover hover:-translate-y-[5px] hover:border-white/20 active:scale-[0.98] outline-none supports-[backdrop-filter]:bg-ios-glass"
+      className="group h-full cursor-pointer rounded-[20px] bg-ios-glass-solid backdrop-blur-[20px] border border-ios-border overflow-hidden flex flex-col transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-ios-glass-hover hover:-translate-y-[5px] hover:border-white/20 active:scale-[0.98] outline-none supports-[backdrop-filter]:bg-ios-glass"
     >
       <div className="relative w-full aspect-video overflow-hidden">
         <Image

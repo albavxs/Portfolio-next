@@ -117,8 +117,8 @@
       },
       {
         "title": "SharkType",
-        "description": "Plataforma de typing focada em stacks de tecnologia, que ensina o usuário sobre o que está digitando através de 'perguntas invertidas' — perguntas que explicam ao usuário.",
-        "details": "Uma plataforma de treino de digitação rápida com o diferencial de ser focada em stacks de tecnologia. Utiliza o conceito de 'pergunta invertida' para ensinar enquanto o usuário pratica. Em desenvolvimento ativo, com planos de gamificação, leaderboard e sistema de progressão."
+        "description": "Plataforma de digitação para desenvolvedores com trilhas de código e texto, progressão e interface imersiva.",
+        "details": "Uma plataforma de treino de digitação construída em torno de conteúdo real de programação. O SharkType permite praticar com snippets de código e trilhas de texto em vários idiomas, alternar dificuldade e temas, e acompanhar XP, níveis, streak e histórico de sessões em uma interface com feedback sonoro e visuais 3D."
       }
     ]
   },

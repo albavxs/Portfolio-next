@@ -21,7 +21,7 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full max-w-[1000px]">
         {projects.map((project, i) => (
-          <FadeUp key={project.title} delay={i * 100}>
+          <FadeUp key={project.title} delay={i * 100} className="h-full">
             <ProjectCard
               project={project}
               index={i}
