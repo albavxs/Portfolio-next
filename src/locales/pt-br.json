@@ -119,6 +119,11 @@
         "title": "SharkType",
         "description": "Plataforma de digitação para desenvolvedores com trilhas de código e texto, progressão e interface imersiva.",
         "details": "Uma plataforma de treino de digitação construída em torno de conteúdo real de programação. O SharkType permite praticar com snippets de código e trilhas de texto em vários idiomas, alternar dificuldade e temas, e acompanhar XP, níveis, streak e histórico de sessões em uma interface com feedback sonoro e visuais 3D."
+      },
+      {
+        "title": "Minha Estante",
+        "description": "Gerenciador pessoal de acervo de livros com integração ao Google Books, busca, analytics e persistência via localStorage.",
+        "details": "Um sistema de gerenciamento de biblioteca pessoal que permite catalogar, organizar e analisar sua coleção de livros. Inclui busca por título, autor ou ISBN, importação automática de metadados via Google Books API, controle de preços, estatísticas da coleção com gráficos visuais e persistência no navegador via localStorage."
       }
     ]
   },

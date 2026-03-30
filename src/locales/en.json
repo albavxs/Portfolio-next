@@ -119,6 +119,11 @@
         "title": "SharkType",
         "description": "Typing platform for developers with code and text tracks, progression, and an immersive interface.",
         "details": "A typing practice platform built around real programming content. SharkType lets users train with code snippets and multilingual text tracks, switch difficulty and themes, and track XP, levels, streaks, and session history in an interface enhanced with sound feedback and 3D visuals."
+      },
+      {
+        "title": "Minha Estante",
+        "description": "Personal book collection manager with Google Books integration, search, analytics and localStorage persistence.",
+        "details": "A personal library management system that lets users catalog, organize, and analyze their book collections. Features include multi-criteria search by title, author or ISBN, automatic metadata import via Google Books API, price tracking, collection statistics with visual charts, and browser-based persistence via localStorage."
       }
     ]
   },
