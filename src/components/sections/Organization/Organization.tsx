@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SOCIAL_LINKS } from "@/lib/constants";
 import FadeUp from "@/components/motion/FadeUp";
-import { BsPeopleFill } from "react-icons/bs";
+import { BsPeopleFill, BsGithub } from "react-icons/bs";
 
 export default function Organization() {
   const { t } = useLanguage();
@@ -43,7 +43,7 @@ export default function Organization() {
       </FadeUp>
 
       <FadeUp delay={200}>
-        <div className="flex justify-center mt-8">
+        <div className="flex flex-wrap justify-center gap-3 mt-8">
           <a
             href={SOCIAL_LINKS.discord}
             target="_blank"
@@ -52,6 +52,15 @@ export default function Organization() {
           >
             <BsPeopleFill size={16} />
             {t("org.cta")}
+          </a>
+          <a
+            href={SOCIAL_LINKS.orgGithub}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-8 py-3 rounded-full bg-ios-glass border border-ios-border text-white text-sm font-medium transition-all duration-300 hover:bg-ios-glass-hover hover:border-white/20 hover:scale-105"
+          >
+            <BsGithub size={16} />
+            {t("org.communityLabel")}
           </a>
         </div>
       </FadeUp>

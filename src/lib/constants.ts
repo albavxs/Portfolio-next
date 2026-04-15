@@ -3,7 +3,7 @@ export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/paulo-guilherme-santos-alves-973527310/",
   instagram: "https://www.instagram.com/pg_alvesx/",
   whatsapp: "https://wa.me/5521964943769",
-  discord: "https://discord.gg/fewcompany",
+  discord: "https://discord.gg/TDjQrY8az",
   orgGithub: "https://github.com/Few-Soldiers",
 } as const;
 

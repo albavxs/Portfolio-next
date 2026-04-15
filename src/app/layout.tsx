@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={poppins.variable}>
+    <html lang="en" className={poppins.variable}>
       <body className="min-h-screen flex flex-col items-center">
         <Providers>{children}</Providers>
       </body>

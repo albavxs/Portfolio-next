@@ -43,10 +43,10 @@ function getNestedValue(obj: Record<string, unknown>, path: string): string {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("pt-br");
+  const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
-    const saved = localStorage.getItem("lang") as Lang | null;
+    const saved = localStorage.getItem("lang-v2") as Lang | null;
     if (saved === "pt-br" || saved === "en") {
       queueMicrotask(() => {
         setLangState(saved);
@@ -60,7 +60,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const setLang = (newLang: Lang) => {
     setLangState(newLang);
-    localStorage.setItem("lang", newLang);
+    localStorage.setItem("lang-v2", newLang);
   };
 
   const t = (key: string): string => {
