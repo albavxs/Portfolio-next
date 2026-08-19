@@ -111,7 +111,7 @@ function CodeArray({ label, values }: { label: string; values: string[] }) {
 
 export default function Hero() {
   const { lang, t } = useLanguage();
-  const resumeUrl = lang === "en" ? "/resume/PauloGuilherme_CV_EN.pdf" : "/resume/PauloGuilherme_CV_PTBR.pdf";
+  const resumeUrl = lang === "en" ? "/resume/PauloGuilherme_CV_EN.docx" : "/resume/PauloGuilherme_CV_PTBR.docx";
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLObjectElement>(null);
