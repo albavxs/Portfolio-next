@@ -44,11 +44,11 @@ const sidebarLinks = [
 ];
 
 const certificates = [
+  { image: "/images/certificados/34536.jpg", title: "Azure Cloud Computing com IA", institution: "São Judas / IBMR", tag: "Cloud 30h" },
+  { image: "/images/certificados/4564566.jpg", title: "Sistemas Computacionais e Segurança", institution: "IBMR", tag: "Segurança 160h" },
   { image: "/images/certificados/175093.jpg", title: "Usabilidade, Dev Web, Mobile e Jogos", institution: "IBMR", tag: "160h" },
   { image: "/images/certificados/1750976520133.jpg", title: "Teoria da Computação e Compiladores", institution: "IBMR", tag: "IA 160h" },
-  { image: "/images/certificados/34536.jpg", title: "Azure Cloud Computing com IA", institution: "São Judas / IBMR", tag: "Cloud 30h" },
   { image: "/images/certificados/45645.jpg", title: "Programação de Soluções Computacionais", institution: "IBMR / Oracle Academy", tag: "Oracle 160h" },
-  { image: "/images/certificados/4564566.jpg", title: "Sistemas Computacionais e Segurança", institution: "IBMR", tag: "Segurança 160h" },
 ];
 
 /* ─── Skill Pill with tap-glow on mobile ─── */
