@@ -30,7 +30,7 @@ mesma pasta, para agentes que seguem esse padrão (Codex e outros).
 5. **Verificação real:** `npm run dev` e `playwright-cli` para navegar e tirar screenshots em 1440 / 768 / 390 px.
 
 A taste-skill tem regras próprias (sem gradientes, sem mono, sem eyebrow labels...)
-que conflitam com partes do estilo atual (bloco de código mono, gradient mesh). Quando
+que o estilo atual já segue (veja `DESIGN.md`). Quando
 houver conflito, `DESIGN.md` vence, a não ser que a tarefa seja justamente redesenhar.
 
 ### Requisitos das ferramentas

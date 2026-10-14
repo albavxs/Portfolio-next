@@ -11,62 +11,29 @@ const socials = [
   { href: `mailto:${CONTACT_EMAIL}`, icon: BsEnvelope, label: "Email" },
 ];
 
-const navKeys = [
-  { key: "about", id: "about-section" },
-  { key: "projects", id: "projects-section" },
-  { key: "contact", id: "contact-section" },
-];
-
 export default function Footer() {
   const { t } = useLanguage();
 
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
-
   return (
-    <footer className="w-full flex flex-col items-center pb-10 pt-16">
-      <div className="w-[90%] max-w-[600px] mx-auto flex flex-col items-center gap-6">
-        {/* Divider */}
-        <div className="w-16 h-px bg-ios-border" />
-
-        {/* Navigation links */}
-        <div className="flex flex-wrap justify-center gap-4">
-          {navKeys.map(({ key, id }) => (
-            <button
-              key={id}
-              onClick={() => scrollTo(id)}
-              className="text-xs text-ios-text-secondary hover:text-white transition-colors duration-200 cursor-pointer border-none bg-transparent"
-            >
-              {t(`nav.${key}`)}
-            </button>
-          ))}
-        </div>
-
-        {/* Social icons */}
-        <div className="flex gap-5">
-          {socials.map(({ href, icon: Icon, label }) => (
+    <footer className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-4 flex flex-wrap items-center justify-between gap-6">
+      <p className="text-small text-muted">
+        © {new Date().getFullYear()} {t("footer.copyright")}
+      </p>
+      <ul className="flex gap-2">
+        {socials.map(({ href, icon: Icon, label }) => (
+          <li key={label}>
             <a
-              key={label}
               href={href}
               target={href.startsWith("mailto") ? undefined : "_blank"}
               rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
               aria-label={label}
-              className="text-ios-text-secondary transition-all duration-300 hover:text-white hover:scale-110"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-muted transition-colors hover:text-ink"
             >
-              <Icon className="w-4 h-4" />
+              <Icon size={18} />
             </a>
-          ))}
-        </div>
-
-        {/* Copyright */}
-        <p className="text-xs text-ios-text-secondary/50">
-          {t("footer.copyright")}
-        </p>
-      </div>
+          </li>
+        ))}
+      </ul>
     </footer>
   );
 }

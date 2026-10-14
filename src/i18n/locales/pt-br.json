@@ -3,47 +3,59 @@
     "home": "Início",
     "about": "Sobre",
     "projects": "Projetos",
-    "contact": "Contato"
+    "contact": "Contato",
+    "experience": "Experiência",
+    "openMenu": "Abrir menu de navegação",
+    "closeMenu": "Fechar menu de navegação",
+    "switchLang": "Switch to English"
   },
   "hero": {
     "name": "Paulo Guilherme",
-    "subtitlePre": "",
-    "subtitleBold1": "Desenvolvedor de Software",
-    "subtitleMid": "com mais de",
-    "subtitleBold2": "2 anos de experiência",
-    "subtitleEnd": "transformando ideias em aplicações completas, da interface à infraestrutura, com foco em performance, escalabilidade e experiência do usuário.",
-    "downloadCv": "Baixar CV",
-    "codeBlock": {
-      "name": "Paulo Guilherme Alves",
-      "role": "Desenvolvedor de Software",
-      "experience": "2+ anos",
-      "location": "Rio de Janeiro, RJ",
-      "education": "Ciência da Computação - IBMR",
-      "available": "true"
+    "downloadCv": "Currículo",
+    "lead": "Desenvolvedor full stack no Rio de Janeiro. Construo produtos web de ponta a ponta, e ferramentas que ajudam pessoas a aprender a programar.",
+    "ctaProjects": "Ver projetos",
+    "typing": {
+      "label": "Digite a linha abaixo para abrir meus projetos.",
+      "hint": "Clique aqui e comece a digitar",
+      "hintTouch": "Toque aqui para digitar",
+      "done": "{wpm} ppm, {acc}% de precisão. Essa é a ideia do SharkType, um dos meus projetos.",
+      "skip": "Pular para os projetos",
+      "restart": "Tentar de novo",
+      "inputLabel": "Digite a linha de código"
     }
   },
-  "about": {
-    "location": "Rio de Janeiro, RJ",
-    "university": "IBMR - Ciência da Computação",
-    "sidebar": {
-      "intro": "Sobre Mim",
-      "experience": "Experiência",
-      "certificates": "Certificações",
-      "skills": "Expertise Técnica"
-    },
-    "introTitle": "Sobre Mim",
-    "rolePrefix": "",
-    "roleHighlight": "Desenvolvedor de Software",
-    "bio": "Eu sou o Paulo Guilherme, estudante de Ciência da Computação na IBMR e Desenvolvedor de Software. Meu objetivo é transformar requisitos em interfaces claras, arquiteturas sustentáveis e sistemas inovadores que agregem experiência ao usuário.",
-    "certificatesTitle": "Certificações",
-    "certificatesSubtitle": "Role para navegar pelos certificados",
-    "experienceTitle": "Experiência Profissional",
-    "skillsTitle": "Expertise Técnica"
+  "projects": {
+    "sectionTitle": "Projetos",
+    "viewCode": "Código",
+    "liveDemo": "Demo",
+    "entries": [
+      {
+        "title": "AlgoriUI",
+        "description": "Plataforma open-source que permite aprender sobre algoritmos de forma interativa e visual, com técnica de aprendizado inspirada no livro Entendendo Algoritmos.",
+        "details": "Uma ferramenta educacional que dá vida a algoritmos e estruturas de dados através de representações visuais passo a passo. Usuários podem explorar algoritmos de ordenação, árvores de busca, listas encadeadas e mais — assistindo cada operação se desenrolar em tempo real. Construída para tornar fundamentos de CS acessíveis e envolventes."
+      },
+      {
+        "title": "SharkType",
+        "description": "Plataforma de digitação para desenvolvedores com trilhas de código e texto, progressão e interface imersiva.",
+        "details": "Uma plataforma de treino de digitação construída em torno de conteúdo real de programação. O SharkType permite praticar com snippets de código e trilhas de texto em vários idiomas, alternar dificuldade e temas, e acompanhar XP, níveis, streak e histórico de sessões em uma interface com feedback sonoro e visuais 3D."
+      },
+      {
+        "title": "Minha Estante",
+        "description": "Gerenciador pessoal de acervo de livros com integração ao Google Books, busca, analytics e persistência via localStorage.",
+        "details": "Um sistema de gerenciamento de biblioteca pessoal que permite catalogar, organizar e analisar sua coleção de livros. Inclui busca por título, autor ou ISBN, importação automática de metadados via Google Books API, controle de preços, estatísticas da coleção com gráficos visuais e persistência no navegador via localStorage."
+      }
+    ],
+    "intro": "Produtos que desenhei e construí, da interface ao deploy.",
+    "details": "Detalhes",
+    "close": "Fechar"
   },
-  "skills": {
-    "languages": "Linguagens",
-    "frameworks": "Frameworks & Runtime",
-    "infra": "Infra, DB & Tools"
+  "org": {
+    "title": "Few Soldiers",
+    "description": "Como fundador da comunidade, meu objetivo é conectar desenvolvedores para contribuir em projetos open source e incentivar o aprendizado prático. Compartilhamos conhecimento, revisamos código e construímos projetos reais juntos.",
+    "roleShort": "Fundador",
+    "cta": "Entrar na comunidade",
+    "githubCta": "Organização no GitHub",
+    "imageAlt": "Página da organização Few Soldiers no GitHub, com membros e a stack usada"
   },
   "experience": {
     "entries": [
@@ -96,50 +108,37 @@
           "Escolha de stack tecnológica baseada nas necessidades do projeto"
         ]
       }
-    ]
+    ],
+    "sectionTitle": "Experiência",
+    "showDetails": "Ver o que fiz",
+    "hideDetails": "Esconder detalhes"
   },
-  "org": {
-    "title": "Comunidade de Desenvolvimento Open Source",
-    "description": "Como fundador da comunidade, meu objetivo é conectar desenvolvedores para contribuir em projetos open source e incentivar o aprendizado prático. Compartilhamos conhecimento, revisamos código e construímos projetos reais juntos.",
-    "communityLabel": "Organização · GitHub",
-    "roleShort": "Fundador",
-    "profileBio": "Desenvolvedor de Software, Open Source & Comunidade",
-    "cta": "Entrar na comunidade"
+  "about": {
+    "location": "Rio de Janeiro, RJ",
+    "university": "IBMR - Ciência da Computação",
+    "introTitle": "Sobre",
+    "bio": "Eu sou o Paulo Guilherme, estudante de Ciência da Computação na IBMR e Desenvolvedor de Software. Meu objetivo é transformar requisitos em interfaces claras, arquiteturas sustentáveis e sistemas inovadores que agreguem experiência ao usuário.",
+    "certificatesTitle": "Certificações",
+    "skillsTitle": "Stack",
+    "viewCertificate": "Ver certificado"
   },
-  "projects": {
-    "sectionTitle": "Projetos",
-    "viewCode": "Código",
-    "liveDemo": "Demo",
-    "entries": [
-      {
-        "title": "AlgoriUI",
-        "description": "Plataforma open-source que permite aprender sobre algoritmos de forma interativa e visual, com técnica de aprendizado inspirada no livro Entendendo Algoritmos.",
-        "details": "Uma ferramenta educacional que dá vida a algoritmos e estruturas de dados através de representações visuais passo a passo. Usuários podem explorar algoritmos de ordenação, árvores de busca, listas encadeadas e mais — assistindo cada operação se desenrolar em tempo real. Construída para tornar fundamentos de CS acessíveis e envolventes."
-      },
-      {
-        "title": "SharkType",
-        "description": "Plataforma de digitação para desenvolvedores com trilhas de código e texto, progressão e interface imersiva.",
-        "details": "Uma plataforma de treino de digitação construída em torno de conteúdo real de programação. O SharkType permite praticar com snippets de código e trilhas de texto em vários idiomas, alternar dificuldade e temas, e acompanhar XP, níveis, streak e histórico de sessões em uma interface com feedback sonoro e visuais 3D."
-      },
-      {
-        "title": "Minha Estante",
-        "description": "Gerenciador pessoal de acervo de livros com integração ao Google Books, busca, analytics e persistência via localStorage.",
-        "details": "Um sistema de gerenciamento de biblioteca pessoal que permite catalogar, organizar e analisar sua coleção de livros. Inclui busca por título, autor ou ISBN, importação automática de metadados via Google Books API, controle de preços, estatísticas da coleção com gráficos visuais e persistência no navegador via localStorage."
-      }
-    ]
+  "skills": {
+    "languages": "Linguagens",
+    "frameworks": "Frameworks e runtime",
+    "infra": "Infra, banco de dados e ferramentas"
   },
   "contact": {
-    "sectionTitle": "Vamos Conversar",
-    "subtitle": "Aberto para oportunidades, projetos freelas e conexões na área de tecnologia. Sinta-se à vontade para entrar em contato pelos canais abaixo.",
-    "contactInfo": "Informações de contato",
-    "available": "Disponível para conversas",
-    "phone": "Telefone",
+    "sectionTitle": "Vamos conversar",
+    "subtitle": "Aberto a vagas, projetos freelance e colaborações open source. E-mail é o jeito mais rápido de falar comigo.",
     "whatsapp": "WhatsApp",
     "email": "E-mail",
     "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "github": "GitHub",
+    "copy": "Copiar e-mail",
+    "copied": "Copiado",
+    "emailCta": "Enviar e-mail"
   },
   "footer": {
-    "copyright": "© 2025 Paulo Guilherme. Todos os direitos reservados."
+    "copyright": "Paulo Guilherme. Todos os direitos reservados."
   }
 }

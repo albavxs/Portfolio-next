@@ -3,38 +3,35 @@
 import { useState } from "react";
 import { projects, type Project } from "@/content/projects";
 import { useLanguage } from "@/i18n/LanguageContext";
-import FadeUp from "@/shared/motion/FadeUp";
+import Section from "@/shared/ui/Section";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
+
+/* SharkType abre a seção: é o projeto que o trecho do Hero imita */
+const FEATURED = 1;
 
 export default function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
   const { t } = useLanguage();
 
-  return (
-    <section id="projects-section" className="w-full flex flex-col items-center px-4 sm:px-6 py-16 sm:py-24">
-      <FadeUp>
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-          {t("projects.sectionTitle")}
-        </h2>
-      </FadeUp>
+  const rest = projects.map((project, index) => ({ project, index })).filter(({ index }) => index !== FEATURED);
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full max-w-[1000px]">
-        {projects.map((project, i) => (
-          <FadeUp key={project.title} delay={i * 100} className="h-full">
-            <ProjectCard
-              project={project}
-              index={i}
-              onClick={() => setSelected(project)}
-            />
-          </FadeUp>
+  return (
+    <Section id="projects-section" title={t("projects.sectionTitle")} intro={t("projects.intro")}>
+      <ProjectCard
+        project={projects[FEATURED]}
+        index={FEATURED}
+        featured
+        onOpen={() => setSelected(projects[FEATURED])}
+      />
+
+      <div className="mt-4 sm:mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        {rest.map(({ project, index }) => (
+          <ProjectCard key={project.title} project={project} index={index} onOpen={() => setSelected(project)} />
         ))}
       </div>
 
-      <ProjectModal
-        project={selected}
-        onClose={() => setSelected(null)}
-      />
-    </section>
+      <ProjectModal project={selected} onClose={() => setSelected(null)} />
+    </Section>
   );
 }

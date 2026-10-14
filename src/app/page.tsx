@@ -1,25 +1,25 @@
+import Nav from "@/features/navigation/Nav";
 import Hero from "@/features/hero/Hero";
-import About from "@/features/about/About";
-import Organization from "@/features/organization/Organization";
 import Projects from "@/features/projects/Projects";
+import Organization from "@/features/organization/Organization";
+import Experience from "@/features/experience/Experience";
+import About from "@/features/about/About";
 import Contact from "@/features/contact/Contact";
 import Footer from "@/features/footer/Footer";
-import Nav from "@/features/navigation/Nav";
-import ParallaxBackground from "@/shared/ui/ParallaxBackground";
 
 export default function Home() {
   return (
-    <main className="w-full">
+    <>
       <Nav />
-      <Hero />
-      <ParallaxBackground />
-      <div className="relative z-[1]">
-        <About />
-        <Organization />
+      <main className="w-full">
+        <Hero />
         <Projects />
+        <Organization />
+        <Experience />
+        <About />
         <Contact />
-        <Footer />
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

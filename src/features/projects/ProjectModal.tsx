@@ -6,6 +6,7 @@ import Image from "next/image";
 import type { Project } from "@/content/projects";
 import { projects } from "@/content/projects";
 import { useLanguage } from "@/i18n/LanguageContext";
+import Tag from "@/shared/ui/Tag";
 
 interface Props {
   project: Project | null;
@@ -49,7 +50,7 @@ export default function ProjectModal({ project, onClose }: Props) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           onClick={onClose}
-          className="fixed inset-0 z-[1001] flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-2 sm:p-5"
+          className="fixed inset-0 z-[1001] flex items-end sm:items-center justify-center bg-black/75 p-2 sm:p-5"
         >
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -57,7 +58,10 @@ export default function ProjectModal({ project, onClose }: Props) {
             exit={{ opacity: 0, y: 100 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
             onClick={(e) => e.stopPropagation()}
-            className="w-full sm:max-w-[600px] max-h-[90vh] overflow-y-auto bg-ios-glass-solid backdrop-blur-[30px] border border-ios-border rounded-t-[32px] sm:rounded-[24px] flex flex-col gap-5 shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
+            role="dialog"
+            aria-modal="true"
+            aria-label={project.title}
+            className="w-full sm:max-w-[640px] max-h-[90vh] overflow-y-auto bg-surface rounded-t-2xl sm:rounded-lg flex flex-col gap-5 shadow-[0_24px_64px_rgba(0,0,0,0.6)]"
           >
             {/* Screenshot */}
             <div className="relative w-full aspect-video">
@@ -66,41 +70,35 @@ export default function ProjectModal({ project, onClose }: Props) {
                 alt={project.title}
                 fill
                 sizes="(max-width: 640px) 100vw, 600px"
-                className="object-cover rounded-t-[32px] sm:rounded-t-[24px]"
+                className="object-cover object-top"
               />
             </div>
 
             <div className="px-5 pb-5 sm:px-8 sm:pb-8 flex flex-col gap-4 sm:gap-5">
-              {/* Handle bar (mobile) */}
-              <div className="w-10 h-1 bg-white/20 rounded-full mx-auto sm:hidden" />
-
+              
               <div className="flex items-start justify-between">
-                <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                <h3 className="text-heading font-semibold text-ink">{project.title}</h3>
                 <button
                   onClick={onClose}
-                  className="text-ios-text-secondary hover:text-white transition-colors text-2xl leading-none p-1"
+                  aria-label={t("projects.close")}
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-muted hover:text-ink hover:bg-white/[0.08] text-lead cursor-pointer"
                 >
                   &times;
                 </button>
               </div>
 
-              <p className="text-sm text-ios-text-secondary leading-relaxed">
+              <p className="text-body text-muted">
                 {getTranslated("description", project.description)}
               </p>
 
-              <p className="text-sm text-ios-text-secondary leading-relaxed">
+              <p className="text-body text-muted">
                 {getTranslated("details", project.details)}
               </p>
 
               {/* Tech tags */}
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((techItem) => (
-                  <span
-                    key={techItem}
-                    className="text-xs text-ios-text-secondary border border-ios-border rounded-full px-3 py-1"
-                  >
-                    {techItem}
-                  </span>
+                  <Tag key={techItem}>{techItem}</Tag>
                 ))}
               </div>
 
@@ -109,20 +107,18 @@ export default function ProjectModal({ project, onClose }: Props) {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-full bg-accent-strong px-5 py-2.5 text-body font-medium text-white transition-colors hover:bg-accent"
                 >
-                  <button className="bg-ios-accent text-white border-none py-2.5 px-5 rounded-xl font-semibold text-sm cursor-pointer transition-all duration-200 hover:brightness-110 hover:scale-[1.02]">
-                    GitHub
-                  </button>
+                  GitHub
                 </a>
                 {project.deployUrl && (
                   <a
                     href={project.deployUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="inline-flex items-center rounded-full bg-white/[0.08] px-5 py-2.5 text-body font-medium text-ink transition-colors hover:bg-white/[0.14]"
                   >
-                    <button className="bg-white/10 text-white border-none py-2.5 px-5 rounded-xl text-sm cursor-pointer transition-all duration-200 hover:bg-white/20 active:scale-95">
-                      Live Demo
-                    </button>
+                    {t("projects.liveDemo")}
                   </a>
                 )}
               </div>

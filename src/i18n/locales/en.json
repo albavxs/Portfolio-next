@@ -3,47 +3,59 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "experience": "Experience",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "switchLang": "Mudar para português"
   },
   "hero": {
     "name": "Paulo Guilherme",
-    "subtitlePre": "",
-    "subtitleBold1": "Software",
-    "subtitleMid": "Developer with over",
-    "subtitleBold2": "2 years of experience",
-    "subtitleEnd": "turning ideas into complete applications, from interface to infrastructure, focused on performance, scalability, and user experience.",
-    "downloadCv": "My Resume",
-    "codeBlock": {
-      "name": "Paulo Guilherme Alves",
-      "role": "Software Developer",
-      "experience": "2+ years",
-      "location": "Rio de Janeiro, RJ",
-      "education": "Computer Science - IBMR",
-      "available": "true"
+    "downloadCv": "Resume",
+    "lead": "Full stack developer in Rio de Janeiro. I build web products end to end, and tools that help people learn to code.",
+    "ctaProjects": "See projects",
+    "typing": {
+      "label": "Type the line below to open my projects.",
+      "hint": "Click here and start typing",
+      "hintTouch": "Tap here to type",
+      "done": "{wpm} wpm, {acc}% accuracy. That is the idea behind SharkType, one of my projects.",
+      "skip": "Skip to projects",
+      "restart": "Try again",
+      "inputLabel": "Type the code line"
     }
   },
-  "about": {
-    "location": "Rio de Janeiro, RJ",
-    "university": "IBMR - Computer Science",
-    "sidebar": {
-      "intro": "About Me",
-      "experience": "Experience",
-      "certificates": "Certificates",
-      "skills": "Technical Expertise"
-    },
-    "introTitle": "About Me",
-    "rolePrefix": "",
-    "roleHighlight": "Software Developer",
-    "bio": "I'm Paulo Guilherme, a Computer Science student at IBMR and Software Developer. My goal is to transform requirements into clear interfaces, sustainable architectures, and innovative systems that deliver great user experiences.",
-    "certificatesTitle": "Certificates",
-    "certificatesSubtitle": "Scroll to browse certificates",
-    "experienceTitle": "Professional Experience",
-    "skillsTitle": "Technical Expertise"
+  "projects": {
+    "sectionTitle": "Projects",
+    "viewCode": "Code",
+    "liveDemo": "Demo",
+    "entries": [
+      {
+        "title": "AlgoriUI",
+        "description": "Open-source platform for learning algorithms interactively and visually, with a learning technique inspired by the book Grokking Algorithms.",
+        "details": "An educational tool that brings algorithms and data structures to life through visual, step-by-step representations. Users can explore sorting algorithms, search trees, linked lists, and more — watching each operation unfold in real time. Built to make CS fundamentals accessible and engaging."
+      },
+      {
+        "title": "SharkType",
+        "description": "Typing platform for developers with code and text tracks, progression, and an immersive interface.",
+        "details": "A typing practice platform built around real programming content. SharkType lets users train with code snippets and multilingual text tracks, switch difficulty and themes, and track XP, levels, streaks, and session history in an interface enhanced with sound feedback and 3D visuals."
+      },
+      {
+        "title": "Minha Estante",
+        "description": "Personal book collection manager with Google Books integration, search, analytics and localStorage persistence.",
+        "details": "A personal library management system that lets users catalog, organize, and analyze their book collections. Features include multi-criteria search by title, author or ISBN, automatic metadata import via Google Books API, price tracking, collection statistics with visual charts, and browser-based persistence via localStorage."
+      }
+    ],
+    "intro": "Products I designed and built, from the interface to the deploy.",
+    "details": "Details",
+    "close": "Close"
   },
-  "skills": {
-    "languages": "Languages",
-    "frameworks": "Frameworks & Runtime",
-    "infra": "Infra, DB & Tools"
+  "org": {
+    "title": "Few Soldiers",
+    "description": "As the community founder, my goal is to connect developers to contribute to open source projects and encourage hands-on learning. We share knowledge, review code, and build real projects together.",
+    "roleShort": "Founder",
+    "cta": "Join the community",
+    "githubCta": "Organization on GitHub",
+    "imageAlt": "Few Soldiers organization page on GitHub, with members and the stack used"
   },
   "experience": {
     "entries": [
@@ -96,50 +108,37 @@
           "Selected technology stacks based on project needs"
         ]
       }
-    ]
+    ],
+    "sectionTitle": "Experience",
+    "showDetails": "Show what I did",
+    "hideDetails": "Hide details"
   },
-  "org": {
-    "title": "Open Source Development Community",
-    "description": "As the community founder, my goal is to connect developers to contribute to open source projects and encourage hands-on learning. We share knowledge, review code, and build real projects together.",
-    "communityLabel": "Organization · GitHub",
-    "roleShort": "Founder",
-    "profileBio": "Software Developer, Open Source & Community",
-    "cta": "Join the community"
+  "about": {
+    "location": "Rio de Janeiro, RJ",
+    "university": "IBMR - Computer Science",
+    "introTitle": "About",
+    "bio": "I'm Paulo Guilherme, a Computer Science student at IBMR and Software Developer. My goal is to transform requirements into clear interfaces, sustainable architectures, and innovative systems that deliver great user experiences.",
+    "certificatesTitle": "Certificates",
+    "skillsTitle": "Stack",
+    "viewCertificate": "View certificate"
   },
-  "projects": {
-    "sectionTitle": "Projects",
-    "viewCode": "Code",
-    "liveDemo": "Demo",
-    "entries": [
-      {
-        "title": "AlgoriUI",
-        "description": "Open-source platform for learning algorithms interactively and visually, with a learning technique inspired by the book Grokking Algorithms.",
-        "details": "An educational tool that brings algorithms and data structures to life through visual, step-by-step representations. Users can explore sorting algorithms, search trees, linked lists, and more — watching each operation unfold in real time. Built to make CS fundamentals accessible and engaging."
-      },
-      {
-        "title": "SharkType",
-        "description": "Typing platform for developers with code and text tracks, progression, and an immersive interface.",
-        "details": "A typing practice platform built around real programming content. SharkType lets users train with code snippets and multilingual text tracks, switch difficulty and themes, and track XP, levels, streaks, and session history in an interface enhanced with sound feedback and 3D visuals."
-      },
-      {
-        "title": "Minha Estante",
-        "description": "Personal book collection manager with Google Books integration, search, analytics and localStorage persistence.",
-        "details": "A personal library management system that lets users catalog, organize, and analyze their book collections. Features include multi-criteria search by title, author or ISBN, automatic metadata import via Google Books API, price tracking, collection statistics with visual charts, and browser-based persistence via localStorage."
-      }
-    ]
+  "skills": {
+    "languages": "Languages",
+    "frameworks": "Frameworks and runtime",
+    "infra": "Infra, databases and tools"
   },
   "contact": {
-    "sectionTitle": "Let's Talk",
-    "subtitle": "Open for opportunities, freelance projects, and connections in the tech space. Feel free to reach out through the channels below.",
-    "contactInfo": "Contact information",
-    "available": "Available for conversations",
-    "phone": "Phone",
+    "sectionTitle": "Let's talk",
+    "subtitle": "Open to full-time roles, freelance projects and open source collaborations. Email is the fastest way to reach me.",
     "whatsapp": "WhatsApp",
     "email": "Email",
     "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "github": "GitHub",
+    "copy": "Copy email",
+    "copied": "Copied",
+    "emailCta": "Send an email"
   },
   "footer": {
-    "copyright": "© 2025 Paulo Guilherme. All rights reserved."
+    "copyright": "Paulo Guilherme. All rights reserved."
   }
 }

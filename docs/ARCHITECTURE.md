@@ -8,23 +8,20 @@ código de interface.
 ```
 src/
 ├── app/                  # Rotas e casca da aplicação (layout, page, providers, globals.css)
-├── features/             # Uma pasta por seção da página
-│   ├── navigation/       # Nav (montado) e Dock (não montado)
-│   ├── hero/             # Hero + scene/ (Three.js: SceneCanvas, GlassPolyhedra, ParticleDust, MouseParallax)
-│   ├── about/
-│   ├── organization/
+├── features/             # Uma pasta por seção da página, na ordem em que aparecem
+│   ├── navigation/       # Nav (barra fixa do topo)
+│   ├── hero/             # Hero + TypeToOpen (linha de código para digitar)
 │   ├── projects/         # Projects, ProjectCard, ProjectModal
+│   ├── organization/     # Comunidade Few Soldiers
+│   ├── experience/
+│   ├── about/            # Bio, stack e certificações
 │   ├── contact/
-│   ├── footer/
-│   ├── experience/       # não montado em page.tsx
-│   └── skills/           # não montado em page.tsx
+│   └── footer/
 ├── shared/               # Peças sem conhecimento de seção
-│   ├── motion/           # FadeUp, FadeLeft (Framer Motion)
-│   └── ui/               # Marquee, ParallaxBackground
-├── content/              # Dados tipados: projects, experience, skills, social (links e e-mail)
+│   └── ui/               # Section, Tag
+├── content/              # Dados tipados: projects, experience, skills, certificates, social
 └── i18n/                 # LanguageContext + locales/en.json e locales/pt-br.json
 ```
-
 ## Regras de dependência
 
 | Camada      | Pode importar de                         |
@@ -36,7 +33,7 @@ src/
 | `i18n`      | os próprios `locales/`                   |
 
 Uma feature não importa outra feature. Se duas seções precisarem da mesma peça, ela
-sobe para `shared/`. Algo que só uma seção usa (como a cena 3D do Hero) fica dentro
+sobe para `shared/`. Algo que só uma seção usa (como o `TypeToOpen` do Hero) fica dentro
 dela.
 
 ## Onde mexer
@@ -50,10 +47,4 @@ dela.
 ## Assets
 
 `public/images/` já está separado por uso: `profile/`, `screenshots/` (projetos),
-`certificados/`, `skills/`, `dock/`, `misc/`. Currículos ficam em `public/resume/`.
-
-## Componentes não montados
-
-`features/experience`, `features/skills` e `features/navigation/Dock` existiam antes da
-reorganização mas não aparecem em `page.tsx`. Foram mantidos para reaproveitamento; o
-`About` já cobre experiência e skills.
+`certificados/`, `skills/`. Currículos ficam em `public/resume/`.
