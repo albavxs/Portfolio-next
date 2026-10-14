@@ -120,7 +120,12 @@
     "bio": "Eu sou o Paulo Guilherme, estudante de Ciência da Computação na IBMR e Desenvolvedor de Software. Meu objetivo é transformar requisitos em interfaces claras, arquiteturas sustentáveis e sistemas inovadores que agreguem experiência ao usuário.",
     "certificatesTitle": "Certificações",
     "skillsTitle": "Stack",
-    "viewCertificate": "Ver certificado"
+    "viewCertificate": "Ver certificado",
+    "sidebar": {
+      "intro": "Sobre mim",
+      "skills": "Stack",
+      "certificates": "Certificações"
+    }
   },
   "skills": {
     "languages": "Linguagens",

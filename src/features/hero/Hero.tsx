@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { SOCIAL_LINKS } from "@/content/social";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -15,6 +16,14 @@ export default function Hero() {
       className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 sm:pt-36 lg:min-h-dvh lg:pt-14 lg:pb-14 grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16 items-center"
     >
       <div>
+        <Image
+          src="/images/profile/thumbnail_Image.jpeg"
+          alt=""
+          width={88}
+          height={88}
+          priority
+          className="mb-8 h-[72px] w-[72px] rounded-full bg-surface object-cover sm:h-[88px] sm:w-[88px]"
+        />
         <h1 className="text-display font-semibold text-ink">{t("hero.name")}</h1>
         <p className="mt-6 max-w-[36ch] text-lead text-muted">{t("hero.lead")}</p>
 

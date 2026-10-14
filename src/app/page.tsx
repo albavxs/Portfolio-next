@@ -6,12 +6,14 @@ import Experience from "@/features/experience/Experience";
 import About from "@/features/about/About";
 import Contact from "@/features/contact/Contact";
 import Footer from "@/features/footer/Footer";
+import Ambient from "@/shared/ui/Ambient";
 
 export default function Home() {
   return (
     <>
+      <Ambient />
       <Nav />
-      <main className="w-full">
+      <main className="relative z-[1] w-full">
         <Hero />
         <Projects />
         <Organization />

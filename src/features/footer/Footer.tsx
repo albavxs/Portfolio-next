@@ -15,7 +15,7 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-4 flex flex-wrap items-center justify-between gap-6">
+    <footer className="relative z-[1] w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-4 flex flex-wrap items-center justify-between gap-6">
       <p className="text-small text-muted">
         © {new Date().getFullYear()} {t("footer.copyright")}
       </p>

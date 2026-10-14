@@ -28,7 +28,8 @@ radius:
 
 effects:
   blur: "só na barra de navegação"
-  motion: "trecho para digitar no Hero + entrada .reveal presa à rolagem; nada mais"
+  motion: "trecho para digitar no Hero, faixas de stack, carrossel de certificados preso à rolagem e entrada .reveal"
+  ambient: "dois brilhos azuis bem suaves fixos atrás da página (shared/ui/Ambient)"
 ---
 
 # DESIGN.md
@@ -58,10 +59,14 @@ o SharkType, e abre os projetos. Sem JavaScript, a linha aparece inteira e o lin
    texto corrido em 17px; parágrafos com no máximo ~65 caracteres.
 4. **O trabalho primeiro.** Ordem da página: Hero, Projetos, Few Soldiers, Experiência,
    Sobre (bio, stack, certificações), Contato.
-5. **Movimento com propósito.** Uma coisa viva no Hero e uma entrada discreta presa à
-   rolagem (`.reveal`). Tudo respeita `prefers-reduced-motion`.
-6. **Bilíngue sempre.** Todo texto passa pelo `t()` e existe em `en` e `pt-br`.
-7. **Sem enfeites de template:** rótulos em caixa alta, eyebrows, mono como "voz técnica",
+5. **Personalidade onde ela conta.** A stack tem pills com ícone que acende na cor da
+   marca e brilho no hover (no celular as cores ficam sempre acesas), em faixas que andam
+   no desktop. Certificações mostram as imagens reais num carrossel preso à rolagem no
+   desktop e em swipe no celular. O Sobre tem perfil fixo com foto e mini navegação.
+6. **Movimento com propósito.** Coisa viva no Hero, faixas da stack, carrossel e uma
+   entrada discreta presa à rolagem (`.reveal`). Tudo respeita `prefers-reduced-motion`.
+7. **Bilíngue sempre.** Todo texto passa pelo `t()` e existe em `en` e `pt-br`.
+8. **Sem enfeites de template:** rótulos em caixa alta, eyebrows, mono como "voz técnica",
    linhas divisórias, numeração 01/02, selos "disponível" piscando.
 
 ## Componentes base

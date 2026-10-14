@@ -103,3 +103,44 @@ body {
     }
   }
 }
+
+/* Faixas de stack em movimento (desktop) */
+@keyframes marquee-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Carrossel de certificados no celular */
+.snap-carousel {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-inline: 1rem;
+  scrollbar-width: none;
+}
+
+.snap-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-card {
+  scroll-snap-align: center;
+}
+
+/* Brilho da cor da marca ao tocar numa skill no celular */
+@media (hover: none) {
+  .skill-pill:active {
+    box-shadow: 0 0 0 1px var(--brand), 0 0 24px color-mix(in srgb, var(--brand) 30%, transparent);
+    transform: scale(1.04);
+  }
+
+  .skill-pill:active svg,
+  .skill-pill:active img {
+    color: var(--brand);
+    filter: none;
+  }
+}

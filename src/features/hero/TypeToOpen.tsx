@@ -74,74 +74,82 @@ export default function TypeToOpen() {
     : "";
 
   return (
-    <div className="w-full rounded-lg bg-surface p-5 sm:p-8">
-      <p className="text-small text-muted">{t("hero.typing.label")}</p>
-
-      <div className="relative mt-5">
-        <code
-          aria-hidden="true"
-          className="block font-mono text-body sm:text-lead leading-relaxed whitespace-pre-wrap"
-        >
-          {TARGET.split("").map((char, i) => {
-            const typed = i < value.length;
-            const wrong = typed && value[i] !== char;
-            const isCaret = focused && !result && i === value.length;
-            return (
-              <span
-                key={i}
-                className={`relative ${
-                  wrong
-                    ? "text-danger underline decoration-2 underline-offset-4"
-                    : typed
-                      ? "text-ink"
-                      : "text-muted"
-                }`}
-              >
-                {isCaret && (
-                  <span className="type-caret absolute -left-px top-[0.15em] h-[1.1em] w-[2px] bg-accent" />
-                )}
-                {char}
-              </span>
-            );
-          })}
-        </code>
-
-        <input
-          ref={inputRef}
-          type="text"
-          value={value}
-          onChange={onChange}
-          onFocus={() => setFocused(true)}
-          onBlur={() => setFocused(false)}
-          aria-label={t("hero.typing.inputLabel")}
-          autoComplete="off"
-          autoCapitalize="off"
-          autoCorrect="off"
-          spellCheck={false}
-          className="absolute inset-0 h-full w-full cursor-text opacity-0"
-        />
+    <div className="w-full overflow-hidden rounded-lg bg-surface">
+      <div className="flex items-center gap-2 bg-white/[0.03] px-5 py-3 sm:px-8">
+        <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+        <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+        <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+        <span className="ml-3 font-mono text-small text-muted">portfolio.ts</span>
       </div>
+      <div className="p-5 sm:p-8">
+        <p className="text-small text-muted">{t("hero.typing.label")}</p>
 
-      <div className="mt-6 flex min-h-[3rem] flex-wrap items-center justify-between gap-x-6 gap-y-3">
-        <p className="text-small text-muted" aria-live="polite">
-          {result ? (
-            doneText
-          ) : focused ? null : (
-            <>
-              <span className="pointer-coarse:hidden">{t("hero.typing.hint")}</span>
-              <span className="hidden pointer-coarse:inline">{t("hero.typing.hintTouch")}</span>
-            </>
-          )}
-        </p>
-        <div className="flex items-center gap-4">
-          {result && (
-            <button onClick={restart} className="text-small text-muted hover:text-ink cursor-pointer">
-              {t("hero.typing.restart")}
-            </button>
-          )}
-          <a href="#projects-section" className="text-small text-accent hover:text-ink">
-            {t("hero.typing.skip")}
-          </a>
+        <div className="relative mt-5">
+          <code
+            aria-hidden="true"
+            className="block font-mono text-body sm:text-lead leading-relaxed whitespace-pre-wrap"
+          >
+            {TARGET.split("").map((char, i) => {
+              const typed = i < value.length;
+              const wrong = typed && value[i] !== char;
+              const isCaret = focused && !result && i === value.length;
+              return (
+                <span
+                  key={i}
+                  className={`relative ${
+                    wrong
+                      ? "text-danger underline decoration-2 underline-offset-4"
+                      : typed
+                        ? "text-ink"
+                        : "text-muted"
+                  }`}
+                >
+                  {isCaret && (
+                    <span className="type-caret absolute -left-px top-[0.15em] h-[1.1em] w-[2px] bg-accent" />
+                  )}
+                  {char}
+                </span>
+              );
+            })}
+          </code>
+
+          <input
+            ref={inputRef}
+            type="text"
+            value={value}
+            onChange={onChange}
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
+            aria-label={t("hero.typing.inputLabel")}
+            autoComplete="off"
+            autoCapitalize="off"
+            autoCorrect="off"
+            spellCheck={false}
+            className="absolute inset-0 h-full w-full cursor-text opacity-0"
+          />
+        </div>
+
+        <div className="mt-6 flex min-h-[3rem] flex-wrap items-center justify-between gap-x-6 gap-y-3">
+          <p className="text-small text-muted" aria-live="polite">
+            {result ? (
+              doneText
+            ) : focused ? null : (
+              <>
+                <span className="pointer-coarse:hidden">{t("hero.typing.hint")}</span>
+                <span className="hidden pointer-coarse:inline">{t("hero.typing.hintTouch")}</span>
+              </>
+            )}
+          </p>
+          <div className="flex items-center gap-4">
+            {result && (
+              <button onClick={restart} className="text-small text-muted hover:text-ink cursor-pointer">
+                {t("hero.typing.restart")}
+              </button>
+            )}
+            <a href="#projects-section" className="text-small text-accent hover:text-ink">
+              {t("hero.typing.skip")}
+            </a>
+          </div>
         </div>
       </div>
     </div>

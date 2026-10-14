@@ -120,7 +120,12 @@
     "bio": "I'm Paulo Guilherme, a Computer Science student at IBMR and Software Developer. My goal is to transform requirements into clear interfaces, sustainable architectures, and innovative systems that deliver great user experiences.",
     "certificatesTitle": "Certificates",
     "skillsTitle": "Stack",
-    "viewCertificate": "View certificate"
+    "viewCertificate": "View certificate",
+    "sidebar": {
+      "intro": "About me",
+      "skills": "Stack",
+      "certificates": "Certificates"
+    }
   },
   "skills": {
     "languages": "Languages",
