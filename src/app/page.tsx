@@ -1,11 +1,11 @@
-import Hero from "@/components/sections/Hero/Hero";
-import About from "@/components/sections/About/About";
-import Organization from "@/components/sections/Organization/Organization";
-import Projects from "@/components/sections/Projects/Projects";
-import Contact from "@/components/sections/Contact/Contact";
-import Footer from "@/components/sections/Footer/Footer";
-import Nav from "@/components/ui/Nav/Nav";
-import ParallaxBackground from "@/components/ui/ParallaxBackground/ParallaxBackground";
+import Hero from "@/features/hero/Hero";
+import About from "@/features/about/About";
+import Organization from "@/features/organization/Organization";
+import Projects from "@/features/projects/Projects";
+import Contact from "@/features/contact/Contact";
+import Footer from "@/features/footer/Footer";
+import Nav from "@/features/navigation/Nav";
+import ParallaxBackground from "@/shared/ui/ParallaxBackground";
 
 export default function Home() {
   return (
