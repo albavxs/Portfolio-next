@@ -39,5 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.claude
+
+# claude: configuração local fica fora; as skills do projeto são versionadas
+.claude/*
+!.claude/skills/
 CLAUDE.md
+
+# saídas locais das skills de design/QA
+.taste-skill/
+.playwright-cli/

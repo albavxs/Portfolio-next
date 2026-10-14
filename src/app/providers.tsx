@@ -1,6 +1,6 @@
 "use client";
 
-import { LanguageProvider } from "@/contexts/LanguageContext";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 import { ReactNode } from "react";
 
 export function Providers({ children }: { children: ReactNode }) {
