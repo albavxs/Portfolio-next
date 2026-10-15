@@ -30,6 +30,7 @@ effects:
   blur: "só na barra de navegação"
   motion: "trecho para digitar no Hero, faixas de stack, carrossel de certificados preso à rolagem e entrada .reveal"
   ambient: "dois brilhos azuis bem suaves fixos atrás da página (shared/ui/Ambient)"
+  hero-scene: "no desktop, traços dourados animados (background.svg), poliedros de vidro e poeira em Three.js atrás do Hero; some ao rolar"
 ---
 
 # DESIGN.md

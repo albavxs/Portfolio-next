@@ -1,12 +1,13 @@
 # Paulo Guilherme | Portfolio
 
-Personal portfolio built with Next.js and Tailwind CSS.
+Personal portfolio built with Next.js, Three.js, and Tailwind CSS.
 
 ## Stack
 
 - Next.js 16
 - React 19
-- Framer Motion (project modal)
+- Three.js + React Three Fiber
+- Framer Motion
 - Tailwind CSS v4
 - TypeScript
 

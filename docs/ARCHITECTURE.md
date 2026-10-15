@@ -10,7 +10,7 @@ src/
 ├── app/                  # Rotas e casca da aplicação (layout, page, providers, globals.css)
 ├── features/             # Uma pasta por seção da página, na ordem em que aparecem
 │   ├── navigation/       # Nav (barra fixa do topo)
-│   ├── hero/             # Hero + TypeToOpen (linha de código para digitar)
+│   ├── hero/             # Hero + TypeToOpen (linha para digitar) + scene/ (Three.js, só desktop)
 │   ├── projects/         # Projects, ProjectCard, ProjectModal
 │   ├── organization/     # Comunidade Few Soldiers
 │   ├── experience/
